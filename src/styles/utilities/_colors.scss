@@ -1,0 +1,202 @@
+// Light Theme Colors
+$light-Primary-Main: #ce8f00;
+$light-Primary-Dark: #475467;
+$light-Primary-Light: #d8d8dc;
+$light-Primary-Gradient-Start: #f5d793;
+$light-Primary-Gradient-End: #fcaf00;
+$light-Primary-SemiDark: #ccc2ab;
+$light-Primary-SemiLight: #8c7030;
+
+$light-Secondary-Main: #3982f8;
+$light-Secondary-Pale: #ceebf5;
+$light-Secondary-Gradient-Start: #f5d793;
+$light-Secondary-Gradient-End: #005d7b;
+
+$light-Neutral-BG-Light: #ffffff;
+$light-Neutral-BG-Dark: #e0dbce;
+$light-Neutral-BG-Shadow: #000000;
+$light-Neutral-BG-Main: #f5f5f5;
+$light-Neutral-BG-Shadow2: #1b1b1b;
+$light-Neutral-BG-Backdrop: #333333;
+
+$light-Neutral-Text-Title: #290905;
+$light-Neutral-Text-Caption: #827d7c;
+$light-Neutral-Text-CaptionT2: #6b6862;
+$light-Neutral-Text-Title2: #291d05;
+$light-Neutral-Text-Title3: #ffffff;
+
+$light-Semantic-Success-Main: #42b778;
+$light-Semantic-Success-Light: #96fda0;
+$light-Semantic-Success-Pale: #ecfdf3;
+
+$light-Semantic-Error: #e05151;
+
+$light-Semantic-Progress-Main: #344054;
+$light-Semantic-Progress-Pale: #f2f4f7;
+
+$light-Warning-Progress-Main: #ce8f00;
+$light-Warning-Progress-Pale: #fffaeb;
+
+$light-ColorPallet-Red: #eb5757;
+$light-ColorPallet-Green: #27ae60;
+$light-ColorPallet-Blue: #2d9cdb;
+$light-ColorPallet-Yellow: #f2c94c;
+
+$light-ColorPallet-Orange: #f2994a;
+$light-ColorPallet-BabyBlue: #d3ebff;
+$light-ColorPallet-Pink: #db2daa;
+$light-ColorPallet-Irancell: #ffcb05;
+$light-ColorPallet-Irancell2: #291d05;
+$light-ColorPallet-PaleRed: #eed4d3;
+$light-ColorPallet-Purple: #ad64cb;
+
+$light-Others-Gray: #fcfcfd;
+$light-Others-Gray2: #eaecf0;
+
+// Dark Theme Colors
+$dark-Primary-Main: #fcce65;
+$dark-Primary-Dark: #b88b25;
+$dark-Primary-Light: #403f3c;
+$dark-Primary-Gradient-Start: #f3dfb2;
+$dark-Primary-Gradient-End: #d6af59;
+$dark-Primary-SemiDark: #ccc2ab;
+$dark-Primary-SemiLight: #8c7030;
+
+$dark-Secondary-Main: #3295b6;
+$dark-Secondary-Pale: #ceebf5;
+$dark-Secondary-Gradient-Start: #1bafdf;
+$dark-Secondary-Gradient-End: #005d7b;
+
+$dark-Neutral-BG-Light: #333333;
+$dark-Neutral-BG-Dark: #262626;
+$dark-Neutral-BG-Shadow: #e4e2e2;
+$dark-Neutral-BG-Main: #1e1e1e;
+$dark-Neutral-BG-Shadow2: #282828;
+$dark-Neutral-BG-Backdrop: #0a0a0a;
+
+$dark-Neutral-Text-Title: #f7f7f5;
+$dark-Neutral-Text-Caption: #c0c0c0;
+$dark-Neutral-Text-CaptionT2: #d7d7d7;
+$dark-Neutral-Text-Title2: #080a0a;
+$dark-Neutral-Text-Title3: #ffffff;
+
+$dark-Semantic-Success-Main: #66b78c;
+$dark-Semantic-Success-Light: #c8fdcd;
+$dark-Semantic-Success-Pale: #ecfdf3;
+
+$dark-Semantic-Error: #e07e7e;
+
+$dark-Semantic-Progress-Main: #344054;
+$dark-Semantic-Progress-Pale: #f2f4f7;
+
+$dark-Warning-Progress-Main: #ce8f00;
+$dark-Warning-Progress-Pale: #fffaeb;
+
+$dark-ColorPallet-Red: #fc8d8d;
+$dark-ColorPallet-Green: #49ae74;
+$dark-ColorPallet-Blue: #5aacdb;
+$dark-ColorPallet-Yellow: #f2d57b;
+
+$dark-ColorPallet-Orange: #f2b37b;
+$dark-ColorPallet-BabyBlue: #d3ebff;
+$dark-ColorPallet-Pink: #db5ab7;
+$dark-ColorPallet-Irancell: #ffcb05;
+$dark-ColorPallet-Irancell2: #ffcb05;
+$dark-ColorPallet-PaleRed: #eed4d3;
+$dark-ColorPallet-Purple: #b98ccb;
+
+$dark-Others-Gray: #fcfcfd;
+$dark-Others-Gray2: #eaecf0;
+
+// Dynamic Colors for CSS Custom Properties
+:root {
+  // Light Theme
+  --Primary-Main: #{$light-Primary-Main};
+  --Primary-Dark: #{$light-Primary-Dark};
+  --Primary-Light: #{$light-Primary-Light};
+  --Primary-Gradient-Start: #{$light-Primary-Gradient-Start};
+  --Primary-Gradient-End: #{light-Primary-Gradient-End};
+  --Primary-SemiDark: #{$light-Primary-SemiDark};
+  --Primary-SemiLight: #{$light-Primary-SemiLight};
+  --Secondary-Main: #{$light-Secondary-Main};
+  --Secondary-Pale: #{$light-Secondary-Pale};
+  --Secondary-Gradient-Start: #{$light-Secondary-Gradient-Start};
+  --Secondary-Gradient-End: #{$light-Secondary-Gradient-End};
+  --Neutral-BG-Light: #{$light-Neutral-BG-Light};
+  --Neutral-BG-Dark: #{$light-Neutral-BG-Dark};
+  --Neutral-BG-Shadow: #{$light-Neutral-BG-Shadow};
+  --Neutral-BG-Main: #{$light-Neutral-BG-Main};
+  --Neutral-BG-Shadow2: #{$light-Neutral-BG-Shadow2};
+  --Neutral-BG-Backdrop: #{$light-Neutral-BG-Backdrop};
+  --Neutral-Text-Title: #{$light-Neutral-Text-Title};
+  --Neutral-Text-Caption: #{$light-Neutral-Text-Caption};
+  --Neutral-Text-CaptionT2: #{$light-Neutral-Text-CaptionT2};
+  --Neutral-Text-Title2: #{$light-Neutral-Text-Title2};
+  --Neutral-Text-Title3: #{$light-Neutral-Text-Title3};
+  --Semantic-Success-Main: #{$light-Semantic-Success-Main};
+  --Semantic-Success-Light: #{$light-Semantic-Success-Light};
+  --Semantic-Success-Pale: #{$light-Semantic-Success-Pale};
+  --Semantic-Error: #{$light-Semantic-Error};
+  --Semantic-Progress-Main: #{$light-Semantic-Progress-Main};
+  --Semantic-Progress-Pale: #{$light-Semantic-Progress-Pale};
+  --Warning-Progress-Main: #{$light-Warning-Progress-Main};
+  --Warning-Progress-Pale: #{$light-Warning-Progress-Pale};
+  --ColorPallet-Red: #{$light-ColorPallet-Red};
+  --ColorPallet-Green: #{$light-ColorPallet-Green};
+  --ColorPallet-Blue: #{$light-ColorPallet-Blue};
+  --ColorPallet-Yellow: #{$light-ColorPallet-Yellow};
+  --ColorPallet-Orange: #{$light-ColorPallet-Orange};
+  --ColorPallet-BabyBlue: #{$light-ColorPallet-BabyBlue};
+  --ColorPallet-Pink: #{$light-ColorPallet-Pink};
+  --ColorPallet-Irancell: #{$light-ColorPallet-Irancell};
+  --ColorPallet-Irancell2: #{$light-ColorPallet-Irancell2};
+  --ColorPallet-PaleRed: #{$light-ColorPallet-PaleRed};
+  --ColorPallet-Purple: #{$light-ColorPallet-Purple};
+  --Others-Gray: #{$light-Others-Gray};
+  --Others-Gray2: #{$light-Others-Gray2};
+
+  // Dark Theme
+  --dark-Primary-Main: #{$dark-Primary-Main};
+  --dark-Primary-Dark: #{$dark-Primary-Dark};
+  --dark-Primary-Light: #{$dark-Primary-Light};
+  --dark-Primary-Gradient-Start: #{$dark-Primary-Gradient-Start};
+  --dark-Primary-Gradient-End: #{dark-Primary-Gradient-End};
+  --dark-Primary-SemiDark: #{$dark-Primary-SemiDark};
+  --dark-Primary-SemiLight: #{$dark-Primary-SemiLight};
+  --dark-Secondary-Main: #{$dark-Secondary-Main};
+  --dark-Secondary-Pale: #{$dark-Secondary-Pale};
+  --dark-Secondary-Gradient-Start: #{$dark-Secondary-Gradient-Start};
+  --dark-Secondary-Gradient-End: #{$dark-Secondary-Gradient-End};
+  --dark-Neutral-BG-Light: #{$dark-Neutral-BG-Light};
+  --dark-Neutral-BG-Dark: #{$dark-Neutral-BG-Dark};
+  --dark-Neutral-BG-Shadow: #{$dark-Neutral-BG-Shadow};
+  --dark-Neutral-BG-Main: #{$dark-Neutral-BG-Main};
+  --dark-Neutral-BG-Shadow2: #{$dark-Neutral-BG-Shadow2};
+  --dark-Neutral-BG-Backdrop: #{$dark-Neutral-BG-Backdrop};
+  --dark-Neutral-Text-Title: #{$dark-Neutral-Text-Title};
+  --dark-Neutral-Text-Caption: #{$dark-Neutral-Text-Caption};
+  --dark-Neutral-Text-CaptionT2: #{$dark-Neutral-Text-CaptionT2};
+  --dark-Neutral-Text-Title2: #{$dark-Neutral-Text-Title2};
+  --dark-Neutral-Text-Title3: #{$dark-Neutral-Text-Title3};
+  --dark-Semantic-Success-Main: #{$dark-Semantic-Success-Main};
+  --dark-Semantic-Success-Light: #{$dark-Semantic-Success-Light};
+  --dark-Semantic-Success-Pale: #{$dark-Semantic-Success-Pale};
+  --dark-Semantic-Error: #{$dark-Semantic-Error};
+  --dark-Semantic-Progress-Main: #{$dark-Semantic-Progress-Main};
+  --dark-Semantic-Progress-Pale: #{$dark-Semantic-Progress-Pale};
+  --dark-Warning-Progress-Main: #{$dark-Warning-Progress-Main};
+  --dark-Warning-Progress-Pale: #{$dark-Warning-Progress-Pale};
+  --dark-ColorPallet-Red: #{$dark-ColorPallet-Red};
+  --dark-ColorPallet-Green: #{$dark-ColorPallet-Green};
+  --dark-ColorPallet-Blue: #{$dark-ColorPallet-Blue};
+  --dark-ColorPallet-Yellow: #{$dark-ColorPallet-Yellow};
+  --dark-ColorPallet-Orange: #{$dark-ColorPallet-Orange};
+  --dark-ColorPallet-BabyBlue: #{$dark-ColorPallet-BabyBlue};
+  --dark-ColorPallet-Pink: #{$dark-ColorPallet-Pink};
+  --dark-ColorPallet-Irancell: #{$dark-ColorPallet-Irancell};
+  --dark-ColorPallet-Irancell2: #{$dark-ColorPallet-Irancell2};
+  --dark-ColorPallet-PaleRed: #{$dark-ColorPallet-PaleRed};
+  --dark-ColorPallet-Purple: #{$dark-ColorPallet-Purple};
+  --dark-Others-Gray: #{$dark-Others-Gray};
+  --dark-Others-Gray2: #{$dark-Others-Gray2};
+}
