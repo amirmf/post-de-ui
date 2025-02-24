@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "baseUrl": "./src",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "noEmit": true,
+    "checkJs": true,
+    "jsx": "react-jsx",
+    "module": "commonjs",
+    "sourceMap": true,
+    "paths": {
+      // "Src/*": ["./src/*"],
+      // "Comp/*": ["./src/components/*"],
+      // "Theme/*": ["./src/providers/theme/index"],
+      // "Locale/*": ["./src/providers/localize/index"],
+      // "Router/*": ["./src/providers/router/index"],
+      // "Auth/*": ["./src/providers/auth/index"],
+      // "Screens/*": ["./src/screens/*"],
+      // "Utils": ["./src/utils"],
+      // "Utils/*": ["./src/utils/*"],
+      // "Images/*": ["./src/assets/images/*"],
+      // "Configs/*": ["./src/assets/configs/*"],
+      // "Vectors/*": ["./src/assets/vectors/*"]
+    }
+  },
+  "include": [
+    "src/**/*.*",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    ".eslintrc.js",
+    "src/service-worker.ts",
+    "updateBuildDate.js",
+    "jest.config.js"
+  ],
+  "exclude": ["node_modules", "src/serviceWorkerRegistration.ts", "build"]
+}

@@ -1,0 +1,169 @@
+// Define base spacing (4px)
+$spacing-unit: 4px;
+
+// Mixin to calculate spacing
+@function spacing($value) {
+  @return $value * 10px;
+}
+
+// Loop for margin utilities
+@for $i from 0 through 12 {
+  .m-#{$i} {
+    margin: spacing($i);
+  }
+  .ml-#{$i} {
+    margin-inline-start: spacing($i);
+  }
+  .mr-#{$i} {
+    margin-inline-end: spacing($i);
+  }
+  .mt-#{$i} {
+    margin-top: spacing($i);
+  }
+  .mb-#{$i} {
+    margin-bottom: spacing($i);
+  }
+  .mx-#{$i} {
+    margin-inline: spacing($i);
+  }
+  .my-#{$i} {
+    margin-block: spacing($i);
+  }
+}
+
+// Loop for margin other utilities
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+.mx-auto {
+  margin-inline: auto;
+}
+.my-auto {
+  margin-block: auto;
+}
+.m-auto {
+  margin: auto;
+}
+
+.ml-0 {
+  margin-left: 0;
+}
+.mr-0 {
+  margin-right: 0;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.mx-0 {
+  margin-inline: 0;
+}
+.my-0 {
+  margin-block: 0;
+}
+
+// Loop for padding utilities
+@for $i from 0 through 12 {
+  .p-#{$i} {
+    padding: spacing($i);
+  }
+  .pl-#{$i} {
+    padding-inline-start: spacing($i);
+  }
+  .pr-#{$i} {
+    padding-inline-end: spacing($i);
+  }
+  .pt-#{$i} {
+    padding-top: spacing($i);
+  }
+  .pb-#{$i} {
+    padding-bottom: spacing($i);
+  }
+  .px-#{$i} {
+    padding-inline: spacing($i);
+  }
+  .py-#{$i} {
+    padding-block: spacing($i);
+  }
+}
+
+// Loop for padding other utilities
+.pl-auto {
+  padding-left: auto;
+}
+.pr-auto {
+  padding-right: auto;
+}
+.pt-auto {
+  padding-top: auto;
+}
+.pb-auto {
+  padding-bottom: auto;
+}
+.px-auto {
+  padding-inline: auto;
+}
+.py-auto {
+  padding-block: auto;
+}
+.p-auto {
+  padding: auto;
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+.pr-0 {
+  padding-right: 0;
+}
+.pt-0 {
+  padding-top: 0;
+}
+.pb-0 {
+  padding-bottom: 0;
+}
+.px-0 {
+  padding-inline: 0;
+}
+.py-0 {
+  padding-block: 0;
+}
+
+// Loop for gap utilities
+@for $i from 0 through 12 {
+  .gap-#{$i} {
+    gap: spacing($i);
+  }
+}
+
+// Gap other utilities
+.gap-auto {
+  gap: auto;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.h-full {
+  height: 100%;
+}
