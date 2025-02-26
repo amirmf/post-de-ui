@@ -24,16 +24,17 @@ const Home = () => {
         style={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "flex-end",
           gap: 40,
         }}
       >
-        <img
+        {/* <img
           style={{
             width: "30%",
           }}
           src={PostCan}
           alt="briefkasten"
-        />
+        /> */}
         <div>
           <h2
             style={{
@@ -70,8 +71,25 @@ const Home = () => {
                 onSelect={setSelectedPrivateCommercial}
                 selectedValue={selectedPrivateCommercial}
               />
+              </div>
+              <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                borderBottom: "1px solid rgb(201, 214, 223)",
+                marginBottom: 10,
+                paddingBottom: 10,
+              }}
+            >
+            <SelectSection
+              title="Absence Options"
+              options={["Relocation", "Temporary Absence"]}
+              onSelect={setSelectedRelocation}
+              selectedValue={selectedRelocation}
+            />
 
-              <SelectSection
+            </div>
+            <SelectSection
                 title="Timing"
                 options={[
                   "Immediately (from March 2, 2025)",
@@ -84,23 +102,15 @@ const Home = () => {
                 onSelect={setSelectedTiming}
                 selectedValue={selectedTiming}
               />
-            </div>
-
-            <SelectSection
-              title="Absence Options"
-              options={["Relocation", "Temporary Absence"]}
-              onSelect={setSelectedRelocation}
-              selectedValue={selectedRelocation}
-            />
           </form>
         </div>
       </div>
 
       <button
         style={{
-          backgroundColor: "#d81111",
+          backgroundColor: "black",
           fontSize: 22,
-          borderRadius: 20,
+          borderRadius: 12,
           padding: "10px 20px",
           border: "1px solid transparent",
           color: "white",
