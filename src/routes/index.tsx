@@ -8,17 +8,24 @@ import PrivacyPolicy from "screens/privacyPolicy";
 import TermsAndConditions from "screens/termsAndCondition";
 import CancellationPolicy from "screens/cancelationPolicy";
 import Impressum from "screens/impressum";
-import Layout from "layouts/main";
+import MainLayout from "layouts/main";
+import SecondaryLayout from "layouts/secondary";
 
 const routes = createBrowserRouter([
   {
     path: "",
-    element: <Layout />,
+    element: <MainLayout />,
     children: [
       {
         path: "",
         element: <Home />,
-      },
+      }
+    ],
+  },
+  {
+    path: "",
+    element: <SecondaryLayout />,
+    children: [
       {
         path: "about",
         element: <About />,

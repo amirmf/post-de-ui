@@ -4,7 +4,7 @@ const Impressum = () => {
       <h2 className="box-title">Impressum</h2>
       <hr />
 
-      <h4>Adresse</h4>
+      <h4>Adresse      </h4>
       <p>
         Digitaler Post Service - FZCO
         <br />

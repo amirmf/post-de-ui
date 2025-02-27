@@ -1,16 +1,9 @@
 import { Outlet } from "react-router-dom";
 import HeaderImg from "assets/images/header.jpg";
-import BG from "../../assets/images/bg.jpg";
 import Navbar from "layouts/components/nvabar";
 
-const MainLayout: React.FC = () => {
+const SecondaryLayout: React.FC = () => {
   return (
-    <div style={{
-      height: "100vh",
-      overflowY: "auto"
-    }}>
-              <img src={HeaderImg} alt="Logo" height={100} style={{ width: "100vw" }} />
-
     <div
       style={{
         display: "flex",
@@ -18,16 +11,12 @@ const MainLayout: React.FC = () => {
         height: "100vh",
         width: "100vw",
         textAlign: "center",
-        background: `
-          linear-gradient(to left, white 0%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0) 70%),
-          url(${BG})
-        `,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        overflowY: "auto",
       }}
     >
       {/* Top Image */}
+      <img src={HeaderImg} alt="Logo" height={100} style={{ width: "100vw" }} />
+
 
       {/* Middle Content */}
       <div
@@ -36,22 +25,18 @@ const MainLayout: React.FC = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          width: "100%",
-          height: "100%",
-          overflowY: "auto"
         }}
       >
         <div
-          style={{ padding: 15, marginBottom: 20, maxWidth: 1140, height:"100vh" }}
+          style={{ padding: 15, marginBottom: 20, maxWidth: 1140, width: 940 }}
         >
           <div
             style={{
-              backgroundColor: "transparent",
+              border: "2px solid lightgray",
+              backgroundColor: "white",
               padding: "20px",
               borderRadius: "5px",
               textAlign: "left",
-              width: "50%",
-              justifySelf:"flex-end"
             }}
           >
             <Outlet />
@@ -62,8 +47,7 @@ const MainLayout: React.FC = () => {
       {/* Bottom Navbar */}
       <Navbar />
     </div>
-    </div>
   );
 };
 
-export default MainLayout;
+export default SecondaryLayout;

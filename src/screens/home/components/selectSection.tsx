@@ -65,7 +65,9 @@ export const SelectSection: React.FC<SectionProps> = ({
       ))}
 
       {isLaterSelected && additionalOptions && (
-        <div>
+        <div style={{
+          paddingLeft: 20
+        }}>
           <select
             id="date-options"
             style={{
