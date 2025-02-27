@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [selectedPrivateCommercial, setSelectedPrivateCommercial] =
-    useState<string>("Private forwarding order");
+    useState<string>("Privater Nachsendeauftrag");
   const [selectedTiming, setSelectedTiming] = useState<string>(
-    "Immediately (from March 2, 2025)",
+    "Sofort (ab dem 05.03.2025)",
   );
   const [selectedRelocation, setSelectedRelocation] =
     useState<string>("Relocation");
@@ -24,7 +24,7 @@ const Home = () => {
         style={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "flex-end",
+          // justifyContent: "flex-end",
           gap: 40,
         }}
       >
@@ -42,7 +42,7 @@ const Home = () => {
               marginBottom: 5,
             }}
           >
-            Post forwarding order
+            Post Nachsendeauftrag
           </h2>
           <p
             style={{
@@ -50,7 +50,7 @@ const Home = () => {
               borderBottom: "1px solid rgb(201, 214, 223)",
             }}
           >
-            Type and timing of the forwarding order:
+            Art und Zeitpunkt des Nachsendeauftrags:
           </p>
           <form>
             <div
@@ -65,8 +65,8 @@ const Home = () => {
               <SelectSection
                 title="Forwarding Options"
                 options={[
-                  "Private forwarding order",
-                  "Commercial forwarding order",
+                  "Privater Nachsendeauftrag",
+                  "Gewerblicher Nachsendeauftrag",
                 ]}
                 onSelect={setSelectedPrivateCommercial}
                 selectedValue={selectedPrivateCommercial}
@@ -83,7 +83,7 @@ const Home = () => {
             >
             <SelectSection
               title="Absence Options"
-              options={["Relocation", "Temporary Absence"]}
+              options={["Umzug", "Vorübergehende Abwesenheit"]}
               onSelect={setSelectedRelocation}
               selectedValue={selectedRelocation}
             />
@@ -92,12 +92,12 @@ const Home = () => {
             <SelectSection
                 title="Timing"
                 options={[
-                  "Immediately (from March 2, 2025)",
-                  "Later start time",
+                  "Sofort (ab dem 05.03.2025)",
+                  "Späterer Startzeitpunkt",
                 ]}
                 additionalOptions={[
-                  "Immediately (from March 2, 2025)",
-                  "Later start time",
+                  "Sofort (ab dem 05.03.2025)",
+                  "Späterer Startzeitpunkt",
                 ]}
                 onSelect={setSelectedTiming}
                 selectedValue={selectedTiming}
@@ -116,23 +116,21 @@ const Home = () => {
           color: "white",
           cursor: "pointer",
           alignSelf: "flex-end",
+          marginTop: 40
         }}
         onClick={() => {
           navigate("/impressum");
         }}
       >
-        Apply online now
+        Jetzt online beantragen
       </button>
       <p
         style={{
-          textAlign: "center",
-          margin: 40,
+          textAlign: "left",
+          margin: "40px 0px",
         }}
       >
-        If you would like to place a forwarding order online, then you have come
-        to the right place. Private individuals can place a forwarding order
-        from €11.50 per month including VAT. Businesses can place a forwarding
-        order from €12.33 per month including VAT.
+        Sie möchten einen Nachsendeauftrag online stellen, dann sind Sie hier richtig. Privatpersonen können den Nachsendeauftrag ab 11,50€ im Monat inkl. MwSt. stellen. Gewerbetreibende können den Nachsendeauftrag ab 12,33€ im Monat inkl. MwSt. stellen.
       </p>
     </div>
   );

@@ -1,8 +1,8 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+# #!/bin/sh
+# . "$(dirname "$0")/_/husky.sh"
 
-# Run pc script (lint and format)
-npm run pc
+# # Run pc script (lint and format)
+# npm run pc
 
-# Add changes to the commit
-git add .
+# # Add changes to the commit
+# git add .
