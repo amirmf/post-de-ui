@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import HeaderImg from "assets/images/header.jpg";
 import Navbar from "layouts/components/nvabar";
+import Header from "layouts/components/header";
 
 const SecondaryLayout: React.FC = () => {
   return (
@@ -9,15 +9,13 @@ const SecondaryLayout: React.FC = () => {
         display: "flex",
         flexDirection: "column",
         height: "100vh",
-        width: "100vw",
+        // width: "100vw",
         textAlign: "center",
         overflowY: "auto",
       }}
     >
       {/* Top Image */}
-      <img src={HeaderImg} alt="Logo" height={100} style={{ width: "100vw" }} />
-
-
+      <Header />
       {/* Middle Content */}
       <div
         style={{
