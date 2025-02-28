@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import HeaderImg from "assets/images/header.jpg";
-import BG from "../../assets/images/bg.jpg";
+import BG from "assets/images/bg.jpg";
 import Navbar from "layouts/components/nvabar";
+import Header from "layouts/components/header";
 
 const MainLayout: React.FC = () => {
   return (
@@ -9,13 +9,13 @@ const MainLayout: React.FC = () => {
       height: "100vh",
       overflowY: "auto"
     }}>
-              <img src={HeaderImg} alt="Logo" height={100} style={{ width: "100vw" }} />
+      <Header />
 
     <div
       style={{
         display: "flex",
         flexDirection: "column",
-        height: "100vh",
+        height: "calc(100vh + 100px)",
         width: "100vw",
         textAlign: "center",
         background: `
@@ -37,12 +37,12 @@ const MainLayout: React.FC = () => {
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
-          height: "100%",
-          overflowY: "auto"
+          // height: "100%",
+          // overflowY: "auto"
         }}
       >
         <div
-          style={{ padding: 15, marginBottom: 20, maxWidth: 1140, height:"100vh" }}
+          style={{ padding: 15, marginBottom: 20, maxWidth: 1140 }}
         >
           <div
             style={{
