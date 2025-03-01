@@ -42,15 +42,15 @@ const MainLayout: React.FC = () => {
         }}
       >
         <div
-          style={{ padding: 15, marginBottom: 20, maxWidth: 1140 }}
+          style={{ padding: 15, marginBottom: 20, width: "85%",margin:"0 auto 100px auto" }}
         >
           <div
             style={{
-              backgroundColor: "transparent",
-              padding: "20px",
+              backgroundColor: "#f2f2f2c7",
+              padding: "20px 40px",
               borderRadius: "5px",
               textAlign: "left",
-              width: "50%",
+              width: "40%",
               justifySelf:"flex-end"
             }}
           >

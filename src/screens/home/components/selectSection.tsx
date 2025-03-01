@@ -48,6 +48,7 @@ export const SelectSection: React.FC<SectionProps> = ({
         display: "flex",
         alignItems: "baseline",
         flexDirection: "column",
+        fontSize:"18px"
       }}
     >
       {options.map((option) => (
@@ -74,7 +75,6 @@ export const SelectSection: React.FC<SectionProps> = ({
               display: "block",
               height: 34,
               padding: "6px 12px",
-              fontSize: "14px",
               color: "#555",
               backgroundColor: "#fff",
               backgroundImage: "none",
