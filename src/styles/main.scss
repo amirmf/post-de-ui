@@ -3,3 +3,10 @@
 @use "./utilities/mixins";
 @use "./utilities/flex-grid-utilities";
 @use "./utilities/helpers";
+
+@import "bootstrap/dist/css/bootstrap.css";
+@import "@formio/js/dist/formio.full.min.css";
+
+.formio-form nav{
+    display: none;
+}
