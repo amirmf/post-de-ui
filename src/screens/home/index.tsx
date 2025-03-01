@@ -22,10 +22,9 @@ const Home = () => {
     >
       <div
         style={{
-          display: "flex",
           alignItems: "center",
           // justifyContent: "flex-end",
-          gap: 40,
+          gap: 5,
         }}
       >
         {/* <img
@@ -38,7 +37,7 @@ const Home = () => {
         <div>
           <h2
             style={{
-              fontSize: 45,
+              fontSize: 48,
               marginBottom: 5,
             }}
           >
@@ -47,6 +46,9 @@ const Home = () => {
           <p
             style={{
               marginTop: 0,
+              fontSize: 20,
+              paddingBottom:10,
+              marginBottom:10,
               borderBottom: "1px solid rgb(201, 214, 223)",
             }}
           >
@@ -55,6 +57,7 @@ const Home = () => {
           <form>
             <div
               style={{
+                fontSize: 20,
                 display: "flex",
                 justifyContent: "space-between",
                 borderBottom: "1px solid rgb(201, 214, 223)",
