@@ -61,7 +61,9 @@ export const SelectSection: React.FC<SectionProps> = ({
             checked={selectedValue === option}
             onChange={() => onSelect(option)}
           />
-          <label htmlFor={option}>{option}</label>
+          <label htmlFor={option} style={{
+            paddingLeft:"10px"
+          }}>{option}</label>
         </div>
       ))}
 

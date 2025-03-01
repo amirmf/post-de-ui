@@ -50,7 +50,8 @@ const MainLayout: React.FC = () => {
               padding: "20px 40px",
               borderRadius: "5px",
               textAlign: "left",
-              width: "40%",
+              width: "100%",
+              maxWidth: "600px",
               justifySelf:"flex-end"
             }}
           >

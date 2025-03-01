@@ -10,6 +10,7 @@ import CancellationPolicy from "screens/cancelationPolicy";
 import Impressum from "screens/impressum";
 import MainLayout from "layouts/main";
 import SecondaryLayout from "layouts/secondary";
+import Submission from "screens/submission";
 
 const routes = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const routes = createBrowserRouter([
       {
         path: "impressum",
         element: <Impressum />,
+      },
+      {
+        path: "submission",
+        element: <Submission />,
       },
     ],
   },

@@ -122,7 +122,7 @@ const Home = () => {
           marginTop: 40
         }}
         onClick={() => {
-          navigate("/impressum");
+          navigate("/submission");
         }}
       >
         Jetzt online beantragen
