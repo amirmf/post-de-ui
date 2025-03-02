@@ -10,14 +10,15 @@ const Navbar = () => {
             fontSize: 14
         },
         span: {
-            color: "#337ab7"
+            color: "#337ab7",
+            padding: "0 10px"
         }
     }
   return (
     <nav
     style={{
       padding: "10px",
-      display: "flex",
+      display: "block",
       justifyContent: "center",
       gap: "5px",
       background: "#ffffff5c",

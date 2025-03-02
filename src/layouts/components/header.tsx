@@ -9,7 +9,7 @@ const Header = () => {
       style={{
         backgroundColor: "#ffcc01",
         width: "100vw",
-        paddingLeft: 100,
+        paddingLeft: "2%",
       }}
     >
       <div
@@ -23,8 +23,7 @@ const Header = () => {
           onClick={() => navigate("/")}
           src={HeaderImg}
           alt="Logo"
-          width={600}
-          height={60}
+          className="logo-img"
           style={{
             cursor: "pointer",
             display: "inline-block",

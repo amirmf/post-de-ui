@@ -39,6 +39,7 @@ const Home = () => {
             style={{
               fontSize: 48,
               marginBottom: 5,
+              wordBreak:"break-word"
             }}
           >
             Post Nachsendeauftrag

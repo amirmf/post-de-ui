@@ -19,14 +19,12 @@ const SecondaryLayout: React.FC = () => {
       {/* Middle Content */}
       <div
         style={{
-          flex: 1,
-          display: "flex",
           justifyContent: "center",
           alignItems: "center",
         }}
       >
         <div
-          style={{ padding: 15, marginBottom: 20, maxWidth: "900px", width: "85%" }}
+          style={{ padding: 15, marginBottom: 20, maxWidth: "900px", width: "85%", margin:"0 auto" }}
         >
           <div
             style={{

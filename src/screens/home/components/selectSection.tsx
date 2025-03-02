@@ -62,6 +62,7 @@ export const SelectSection: React.FC<SectionProps> = ({
             onChange={() => onSelect(option)}
           />
           <label htmlFor={option} style={{
+            display:"inline",
             paddingLeft:"10px"
           }}>{option}</label>
         </div>
