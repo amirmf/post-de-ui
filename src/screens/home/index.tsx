@@ -12,7 +12,19 @@ const Home = () => {
   const [selectedRelocation, setSelectedRelocation] =
     useState<string>("Umzug");
   const navigate = useNavigate();
-  return (
+  const mockDates = [
+    "March 10, 2025",
+    "March 12, 2025",
+    "March 14, 2025",
+    "March 16, 2025",
+    "March 18, 2025",
+    "March 20, 2025",
+    "March 22, 2025",
+    "March 24, 2025",
+    "March 26, 2025",
+    "March 28, 2025",
+  ];
+   return (
     <div
     className="home-holder"
     style={{
@@ -76,7 +88,6 @@ const Home = () => {
               </div>
               <div
               style={{
-                display: "flex",
                 justifyContent: "space-between",
                 borderBottom: "1px solid rgb(201, 214, 223)",
                 marginBottom: 10,
@@ -85,11 +96,27 @@ const Home = () => {
             >
             <SelectSection
               title="Absence Options"
-              options={["Umzug", "Vorübergehende Abwesenheit"]}
+              options={["Umzug", "Vorübergehende Abwesenheit","Sterbefall"]}
               onSelect={setSelectedRelocation}
               selectedValue={selectedRelocation}
             />
-
+            {selectedRelocation=="Vorübergehende Abwesenheit" && (
+                    <div style={{
+                    }}>
+                      <label style={{marginTop:10}} htmlFor="date-options2" >Wieder zustellen ab:</label>
+                      <select
+                      style={{
+                        marginTop:0
+                      }}
+                        id="date-options2">
+                        {mockDates.map((date, index) => (
+                          <option key={index} value={date}>
+                            {date}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
             </div>
             <SelectSection
                 title="Timing"
