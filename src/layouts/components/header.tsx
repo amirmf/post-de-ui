@@ -17,6 +17,7 @@ const Header = () => {
           height: 100,
           display: "flex",
           alignItems: "center",
+          padding:"10px"
         }}
       >
         <img

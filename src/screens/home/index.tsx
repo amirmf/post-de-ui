@@ -10,11 +10,24 @@ const Home = () => {
     "Sofort (ab dem 05.03.2025)",
   );
   const [selectedRelocation, setSelectedRelocation] =
-    useState<string>("Relocation");
+    useState<string>("Umzug");
   const navigate = useNavigate();
-  return (
+  const mockDates = [
+    "March 10, 2025",
+    "March 12, 2025",
+    "March 14, 2025",
+    "March 16, 2025",
+    "March 18, 2025",
+    "March 20, 2025",
+    "March 22, 2025",
+    "March 24, 2025",
+    "March 26, 2025",
+    "March 28, 2025",
+  ];
+   return (
     <div
-      style={{
+    className="home-holder"
+    style={{
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -37,7 +50,6 @@ const Home = () => {
         <div>
           <h2
             style={{
-              fontSize: 48,
               marginBottom: 5,
               wordBreak:"break-word"
             }}
@@ -47,7 +59,6 @@ const Home = () => {
           <p
             style={{
               marginTop: 0,
-              fontSize: 20,
               paddingBottom:10,
               marginBottom:10,
               borderBottom: "1px solid rgb(201, 214, 223)",
@@ -58,7 +69,6 @@ const Home = () => {
           <form>
             <div
               style={{
-                fontSize: 20,
                 display: "flex",
                 justifyContent: "space-between",
                 borderBottom: "1px solid rgb(201, 214, 223)",
@@ -78,7 +88,6 @@ const Home = () => {
               </div>
               <div
               style={{
-                display: "flex",
                 justifyContent: "space-between",
                 borderBottom: "1px solid rgb(201, 214, 223)",
                 marginBottom: 10,
@@ -87,11 +96,27 @@ const Home = () => {
             >
             <SelectSection
               title="Absence Options"
-              options={["Umzug", "Vorübergehende Abwesenheit"]}
+              options={["Umzug", "Vorübergehende Abwesenheit","Sterbefall"]}
               onSelect={setSelectedRelocation}
               selectedValue={selectedRelocation}
             />
-
+            {selectedRelocation=="Vorübergehende Abwesenheit" && (
+                    <div style={{
+                    }}>
+                      <label style={{marginTop:10}} htmlFor="date-options2" >Wieder zustellen ab:</label>
+                      <select
+                      style={{
+                        marginTop:0
+                      }}
+                        id="date-options2">
+                        {mockDates.map((date, index) => (
+                          <option key={index} value={date}>
+                            {date}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
             </div>
             <SelectSection
                 title="Timing"
@@ -111,17 +136,6 @@ const Home = () => {
       </div>
 
       <button
-        style={{
-          backgroundColor: "black",
-          fontSize: 22,
-          borderRadius: 12,
-          padding: "10px 20px",
-          border: "1px solid transparent",
-          color: "white",
-          cursor: "pointer",
-          alignSelf: "flex-end",
-          marginTop: 40
-        }}
         onClick={() => {
           navigate("/submission");
         }}
@@ -130,11 +144,10 @@ const Home = () => {
       </button>
       <p
         style={{
-          textAlign: "left",
-          margin: "40px 0px",
+          textAlign: "justify"
         }}
       >
-        Sie möchten einen Nachsendeauftrag online stellen, dann sind Sie hier richtig. Privatpersonen können den Nachsendeauftrag ab 11,50€ im Monat inkl. MwSt. stellen. Gewerbetreibende können den Nachsendeauftrag ab 12,33€ im Monat inkl. MwSt. stellen.
+        Unser Service ermöglicht Ihnen die Online-Beantragung eines Nachsendeauftrags - für Privatpersonen ab 11,50 €, für Gewerbetreibende ab 12,33 € pro Monat (inkl. MwSt.). Schnell, sicher, unkompliziert.
       </p>
     </div>
   );

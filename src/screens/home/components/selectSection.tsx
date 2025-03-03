@@ -54,6 +54,9 @@ export const SelectSection: React.FC<SectionProps> = ({
       {options.map((option) => (
         <div key={option}>
           <input
+          style={{
+            verticalAlign: "middle"
+          }}
             type="radio"
             id={option}
             name={title}
@@ -62,6 +65,7 @@ export const SelectSection: React.FC<SectionProps> = ({
             onChange={() => onSelect(option)}
           />
           <label htmlFor={option} style={{
+            verticalAlign: "middle",
             display:"inline",
             paddingLeft:"10px"
           }}>{option}</label>
@@ -73,20 +77,7 @@ export const SelectSection: React.FC<SectionProps> = ({
           paddingLeft: 20
         }}>
           <select
-            id="date-options"
-            style={{
-              display: "block",
-              height: 34,
-              padding: "6px 12px",
-              color: "#555",
-              backgroundColor: "#fff",
-              backgroundImage: "none",
-              border: "1px solid #ccc",
-              borderRadius: 4,
-              boxShadow: "inset 0 1px 1px rgba(0, 0, 0, .075)",
-              marginBottom: 0,
-            }}
-          >
+            id="date-options">
             {mockDates.map((date, index) => (
               <option key={index} value={date}>
                 {date}

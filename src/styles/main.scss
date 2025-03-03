@@ -14,3 +14,91 @@
     width: 100%;
     max-width: 600px;
 }
+
+.home-holder h2{
+    font-size: 48px,
+}
+.home-holder p,.home-holder div{
+    font-size: 20px,
+}
+
+.home-holder button{
+    background-color: black; font-size: 18px; border-radius: 7px; padding: 10px; border: 1px solid transparent; color: white; cursor: pointer; align-self: flex-end; margin-top: 20px; font-weight: 900;
+
+}
+
+.home-holder select{
+    display: block;
+    height: 40px;
+    padding: 6px 12px;
+    color: rgb(85, 85, 85);
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset;
+    margin-bottom: 0px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+nav a{
+    color: rgb(51, 122, 183); 
+    text-decoration: none; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 14px;
+}
+
+.home-holder form > div:last-child{
+    height: 116px;
+}
+.home-holder > p:last-child{
+    font-size: 16px;
+    margin-top: 50px;
+    }
+nav > p{
+    font: 12px;
+}
+@media (max-width:800px)  { 
+
+    .home-holder h2{
+        font-size: 21px,
+    }
+    .home-holder p,.home-holder div,.home-holder label{
+        font-size: 12px,
+    }
+    .home-holder button{
+        margin:20px auto; float: none; background-color: black; font-size: 12px; border-radius: 7px; padding: 5px; border: 1px solid transparent; color: white; cursor: pointer; align-self: flex-end; font-weight: 900;
+        width: 100%;
+    }
+    nav a{
+        color: rgb(51, 122, 183); 
+        text-decoration: none; 
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+        font-size: 10px;
+    }
+    .home-holder select{
+        display: block;
+        height: 24px;
+        padding: 2px 5px;
+        margin-top: 5px;
+        color: rgb(85, 85, 85);
+        background-color: rgb(255, 255, 255);
+        background-image: none;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset;
+        margin-bottom: 0px;
+        font-size: 11px;
+    }
+    .home-holder > p:last-child{
+    font-size: 10px;
+    margin-top: 30px;
+    }
+    .home-holder form > div:last-child{
+        height: 68px;
+    }
+    nav > p{
+        font-size: 9px;
+    }
+}
+
