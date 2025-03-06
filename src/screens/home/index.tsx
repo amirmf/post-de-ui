@@ -122,11 +122,13 @@ const Home = () => {
             <SelectSection
                 title="Timing"
                 options={[
-                  "Sofort (ab dem 05.03.2025)",
+                  "Sofort ",
+                  // "Sofort (ab dem 05.03.2025)",
                   "Späterer Startzeitpunkt",
                 ]}
                 additionalOptions={[
-                  "Sofort (ab dem 05.03.2025)",
+                  // "Sofort (ab dem 05.03.2025)",
+                  "Sofort ",
                   "Späterer Startzeitpunkt",
                 ]}
                 onSelect={setSelectedTiming}
@@ -148,7 +150,7 @@ const Home = () => {
           textAlign: "justify"
         }}
       >
-        Unser Service ermöglicht Ihnen die Online-Beantragung eines Nachsendeauftrags - für Privatpersonen ab 11,50 €, für Gewerbetreibende ab 12,33 € pro Monat (inkl. MwSt.). Schnell, sicher, unkompliziert.
+        Unser Service ermöglicht Ihnen die Online-Beantragung eines Nachsendeauftrags - für Privatpersonen und Gewerbetreibende. Schnell, sicher und unkompliziert.
       </p>
     </div>
   );
