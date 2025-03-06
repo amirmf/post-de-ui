@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
 
-// Mock Data for Dates
-const mockDates = [
-  "March 10, 2025",
-  "March 12, 2025",
-  "March 14, 2025",
-  "March 16, 2025",
-  "March 18, 2025",
-  "March 20, 2025",
-  "March 22, 2025",
-  "March 24, 2025",
-  "March 26, 2025",
-  "March 28, 2025",
-];
+
+const today = new Date();
+    const mockDates:any[] = [];
+    
+    // Adding 3 months to today's date
+    const endDate = new Date(today);
+    endDate.setMonth(today.getMonth() + 3);
+    
+    // Loop through from today to the end date
+    let currentDate = new Date(today);
+    currentDate.setDate(currentDate.getDate() + 1);
+    while (currentDate <= endDate) {
+      mockDates.push({"label":currentDate.toISOString().split('T')[0],"value":currentDate.toISOString().split('T')[0]});
+        currentDate.setDate(currentDate.getDate() + 1);
+    }
 
 interface SectionProps {
   title: string;
@@ -79,8 +81,8 @@ export const SelectSection: React.FC<SectionProps> = ({
           <select
             id="date-options">
             {mockDates.map((date, index) => (
-              <option key={index} value={date}>
-                {date}
+              <option key={date['value']} value={date['label']}>
+                {date['label']}
               </option>
             ))}
           </select>

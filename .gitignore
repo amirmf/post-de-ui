@@ -25,3 +25,10 @@ yarn-error.log*
 src/local_settings.ts
 
 package-lock.json
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
