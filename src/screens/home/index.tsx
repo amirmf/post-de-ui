@@ -124,13 +124,13 @@ const Home = () => {
             <SelectSection
                 title="Timing"
                 options={[
-                  "Sofort ",
+                  "Sofort",
                   // "Sofort (ab dem 05.03.2025)",
                   "Späterer Startzeitpunkt",
                 ]}
                 additionalOptions={[
                   // "Sofort (ab dem 05.03.2025)",
-                  "Sofort ",
+                  "Sofort",
                   "Späterer Startzeitpunkt",
                 ]}
                 onSelect={setSelectedTiming}
