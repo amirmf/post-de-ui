@@ -102,6 +102,7 @@ const Home = () => {
             />
             {selectedRelocation=="Vorübergehende Abwesenheit" && (
                     <div style={{
+                      paddingLeft:"20px"
                     }}>
                       <label style={{marginTop:10}} htmlFor="date-options2" >Wieder zustellen ab:</label>
                       <select
