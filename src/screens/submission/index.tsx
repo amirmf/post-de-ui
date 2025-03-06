@@ -176,8 +176,8 @@ const Submission = () => {
     typeToSearch: 'Type to search',
     loading: 'Loading',
     
-    error : "Bitte beheben Sie die folgenden Fehler vor dem Absenden.",
-    submitError : "Bitte beheben Sie die folgenden Fehler vor dem Absenden.",
+    error : "Bitte vervollständigen sie die Pflichtfelder.",
+    submitError : "Bitte vervollständigen sie die Pflichtfelder.",
     invalid_date :"{{field}} is not a valid date.",
     invalid_email : "{{field}} muss eine gültige E-Mail-Adresse sein.",
     invalid_regex : "{{field}} does not match the pattern {{regex}}.",

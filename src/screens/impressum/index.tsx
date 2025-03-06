@@ -6,19 +6,13 @@ const Impressum = () => {
 
       <h4>Adresse</h4>
       <p>
-        Digitaler Post Service - FZCO
+        Digital Service Solutions - FZCO
         <br />
         Dubai Silicon Oasis, Dubai, UAE
-        <br />
-        Lizenznummer: 55663
-        <br />
         <br />
         E-Mail:{" "}
         <a href="mailto:info@post-nachsenden.de">info@post-nachsenden.de</a>
       </p>
-
-      <h4>Steuer-Identifikationsnummer</h4>
-      <p>107845372800001</p>
 
       <h4>Handelsregister</h4>
       <p>Dubai Free Zone Authority</p>
