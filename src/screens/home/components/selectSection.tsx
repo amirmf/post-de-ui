@@ -81,8 +81,8 @@ export const SelectSection: React.FC<SectionProps> = ({
           <select
             id="date-options">
             {mockDates.map((date, index) => (
-              <option key={index} value={date}>
-                {date}
+              <option key={date['value']} value={date['label']}>
+                {date['label']}
               </option>
             ))}
           </select>
