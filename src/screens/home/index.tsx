@@ -7,7 +7,7 @@ const Home = () => {
   const [selectedPrivateCommercial, setSelectedPrivateCommercial] =
     useState<string>("Privater Nachsendeauftrag");
   const [selectedTiming, setSelectedTiming] = useState<string>(
-    "Sofort (ab dem 05.03.2025)",
+    "Sofort",
   );
   const [selectedRelocation, setSelectedRelocation] =
     useState<string>("Umzug");
