@@ -1,3 +1,4 @@
+// @ts-nocheck 
 import React, { useState } from "react";
 import PostCan from "assets/images/briefkasten.png";
 import { SelectSection } from "./components/selectSection";
@@ -5,12 +6,12 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [selectedPrivateCommercial, setSelectedPrivateCommercial] =
-    useState<string>("Privater Nachsendeauftrag");
+    useState<string>("privat");
   const [selectedTiming, setSelectedTiming] = useState<string>(
-    "Sofort",
+    "sofort",
   );
   const [selectedRelocation, setSelectedRelocation] =
-    useState<string>("Umzug");
+    useState<string>("umzug");
   const navigate = useNavigate();
   const today = new Date();
   const mockDates:any[] = [];
@@ -86,8 +87,14 @@ const Home = () => {
               <SelectSection
                 title="Forwarding Options"
                 options={[
-                  "Privater Nachsendeauftrag",
-                  "Gewerblicher Nachsendeauftrag",
+                  {
+                    label:"Privater Nachsendeauftrag",
+                    value:"privat"
+                  },
+                  {
+                    label:"Gewerblicher Nachsendeauftrag",
+                    value:"geschaftlich"
+                  },
                 ]}
                 onSelect={setSelectedPrivateCommercial}
                 selectedValue={selectedPrivateCommercial}
@@ -103,11 +110,24 @@ const Home = () => {
             >
             <SelectSection
               title="Absence Options"
-              options={["Umzug", "Vorübergehende Abwesenheit","Sterbefall"]}
+              options={[
+                {
+                  label:"Umzug",
+                  value:"umzug"
+                },
+                {
+                  label:"Vorübergehende Abwesenheit",
+                  value:"vorubergehendeAbwesenheit"
+                },
+                {
+                  label:"Sterbefall",
+                  value:"sterbefall"
+                },
+              ]}
               onSelect={setSelectedRelocation}
               selectedValue={selectedRelocation}
             />
-            {selectedRelocation=="Vorübergehende Abwesenheit" && (
+            {selectedRelocation=="vorubergehendeAbwesenheit" && (
                     <div style={{
                       paddingLeft:"20px"
                     }}>
@@ -129,14 +149,24 @@ const Home = () => {
             <SelectSection
                 title="Timing"
                 options={[
-                  "Sofort",
-                  // "Sofort (ab dem 05.03.2025)",
-                  "Späterer Startzeitpunkt",
+                  {
+                    label:"Sofort",
+                    value:"sofort"
+                  },
+                  {
+                    label:"Späterer Startzeitpunkt",
+                    value:"spatererStartzeitpunkt"
+                  }
                 ]}
                 additionalOptions={[
-                  // "Sofort (ab dem 05.03.2025)",
-                  "Sofort",
-                  "Späterer Startzeitpunkt",
+                  {
+                    label:"Sofort",
+                    value:"sofort"
+                  },
+                  {
+                    label:"Späterer Startzeitpunkt",
+                    value:"spatererStartzeitpunkt"
+                  }
                 ]}
                 onSelect={setSelectedTiming}
                 selectedValue={selectedTiming}
@@ -147,7 +177,7 @@ const Home = () => {
 
       <button
         onClick={() => {
-          navigate("/submission");
+          navigate(`/submission?artDerNachsendung=${selectedPrivateCommercial}&art=${selectedRelocation}&zeitpunkt=${selectedTiming}&spatererStartzeitpunkt=${!!document.getElementById("date-options")?document.getElementById("date-options").options[document.getElementById("date-options").selectedIndex].value:''}&wiederZustellenAb=${!!document.getElementById("date-options")?document.getElementById("date-options2").options[document.getElementById("date-options2").selectedIndex].value:''}`);
         }}
       >
         Jetzt online beantragen
