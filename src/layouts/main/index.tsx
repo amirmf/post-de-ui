@@ -7,6 +7,7 @@ const MainLayout: React.FC = () => {
   return (
     <div style={{
       height: "100vh",
+      minHeight: "-webkit-fill-available",
       overflowY: "auto"
     }}>
       <Header />
@@ -16,6 +17,7 @@ const MainLayout: React.FC = () => {
         display: "flex",
         flexDirection: "column",
         height: "calc(100vh + 100px)",
+        minHeight: "-webkit-fill-available",
         width: "100vw",
         textAlign: "center",
         background: `
