@@ -6,8 +6,8 @@ import Header from "layouts/components/header";
 const MainLayout: React.FC = () => {
   return (
     <div style={{
-      height: "100vh",
-      minHeight: "-webkit-fill-available",
+      height: "100svh",
+      // minHeight: "-webkit-fill-available",
       overflowY: "auto"
     }}>
       <Header />
@@ -16,8 +16,8 @@ const MainLayout: React.FC = () => {
       style={{
         display: "flex",
         flexDirection: "column",
-        height: "calc(100vh + 100px)",
-        minHeight: "-webkit-fill-available",
+        height: "100svh",
+        // minHeight: "-webkit-fill-available",
         width: "100vw",
         textAlign: "center",
         background: `
