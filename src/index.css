@@ -1,5 +1,6 @@
 body {
   height: 100vh;
+  min-height: -webkit-fill-available;
   display: flex;
   margin: 0;
   width: 100vw;
@@ -10,7 +11,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+html{
+  min-height: -webkit-fill-available;
+}
 code {
   font-family:
     source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;

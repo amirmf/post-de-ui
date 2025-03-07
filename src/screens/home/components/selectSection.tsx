@@ -12,7 +12,12 @@ const today = new Date();
     let currentDate = new Date(today);
     currentDate.setDate(currentDate.getDate() + 1);
     while (currentDate <= endDate) {
-      mockDates.push({"label":currentDate.toISOString().split('T')[0],"value":currentDate.toISOString().split('T')[0]});
+      currentDate.toISOString().split('T')[0]
+      const day = String(currentDate.getDate()).padStart(2, '0');
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+      const year = currentDate.getFullYear();
+      
+      mockDates.push({"label":`${day}-${month}-${year}`,"value":`${year}-${month}-${day}`});
         currentDate.setDate(currentDate.getDate() + 1);
     }
 
