@@ -7,6 +7,13 @@ const Submission = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const loadData = {data:{}};
+  const urlParams = new URLSearchParams(window.location.search);
+  loadData.data.artDerNachsendung = urlParams.get('artDerNachsendung');
+  loadData.data.art = urlParams.get('art');
+  loadData.data.zeitpunkt = urlParams.get('zeitpunkt');
+  loadData.data.spatererStartzeitpunkt = urlParams.get('spatererStartzeitpunkt');
+  loadData.data.wiederZustellenAb = urlParams.get('wiederZustellenAb');
+
   const onSubmitHandler = (submission:any) => {
     setResult(submission);
     setSubmitted(true);

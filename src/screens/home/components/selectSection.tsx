@@ -41,7 +41,7 @@ export const SelectSection: React.FC<SectionProps> = ({
   useEffect(() => {
     if (additionalOptions) {
       // If "Later start time" is selected, show the mock dates
-      if (selectedValue === additionalOptions[1]) {
+      if (selectedValue === "spatererStartzeitpunkt") {
         setIsLaterSelected(true);
       } else {
         setIsLaterSelected(false);
@@ -58,24 +58,24 @@ export const SelectSection: React.FC<SectionProps> = ({
         fontSize:"18px"
       }}
     >
-      {options.map((option) => (
-        <div key={option}>
+      {options.map((option:any) => (
+        <div key={option.value}>
           <input
           style={{
             verticalAlign: "middle"
           }}
             type="radio"
-            id={option}
+            id={option.value}
             name={title}
-            value={option}
-            checked={selectedValue === option}
-            onChange={() => onSelect(option)}
+            value={option.value}
+            checked={selectedValue === option.value}
+            onChange={() => onSelect(option.value)}
           />
-          <label htmlFor={option} style={{
+          <label htmlFor={option.value} style={{
             verticalAlign: "middle",
             display:"inline",
             paddingLeft:"10px"
-          }}>{option}</label>
+          }}>{option.label}</label>
         </div>
       ))}
 
