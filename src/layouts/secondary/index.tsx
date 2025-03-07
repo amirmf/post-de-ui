@@ -8,7 +8,7 @@ const SecondaryLayout: React.FC = () => {
       style={{
         display: "flex",
         flexDirection: "column",
-        height: "100svh",
+        height: "100dvh",
         // minHeight: "-webkit-fill-available",
         // width: "100vw",
         textAlign: "center",
