@@ -177,7 +177,7 @@ const Home = () => {
 
       <button
         onClick={() => {
-          navigate(`/submission?artDerNachsendung=${selectedPrivateCommercial}&art=${selectedRelocation}&zeitpunkt=${selectedTiming}&spatererStartzeitpunkt=${!!document.getElementById("date-options")?document.getElementById("date-options").options[document.getElementById("date-options").selectedIndex].value:''}&wiederZustellenAb=${!!document.getElementById("date-options")?document.getElementById("date-options2").options[document.getElementById("date-options2").selectedIndex].value:''}`);
+          navigate(`/submission?artDerNachsendung=${selectedPrivateCommercial}&art=${selectedRelocation}&zeitpunkt=${selectedTiming}&spatererStartzeitpunkt=${!!document.getElementById("date-options")?document.getElementById("date-options").options[document.getElementById("date-options").selectedIndex].value:''}&wiederZustellenAb=${!!document.getElementById("date-options2")?document.getElementById("date-options2").options[document.getElementById("date-options2").selectedIndex].value:''}`);
         }}
       >
         Jetzt online beantragen
