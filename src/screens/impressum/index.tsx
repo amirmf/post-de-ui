@@ -21,14 +21,14 @@ const Impressum = () => {
       <p>
         Die Europäische Kommission stellt eine Plattform zur
         Online-Streitbeilegung (OS) bereit, die Sie
-        <a
+         <a
           href="//ec.europa.eu/consumers/odr"
           target="_blank"
           rel="noopener noreferrer"
         >
-          hier
+           &nbsp;hier&nbsp; 
         </a>
-        finden. Zur Teilnahme an einem Streitbeilegungsverfahren vor einer
+         finden. Zur Teilnahme an einem Streitbeilegungsverfahren vor einer
         Verbraucherschlichtungsstelle sind wir nicht verpflichtet und nicht
         bereit.
       </p>
