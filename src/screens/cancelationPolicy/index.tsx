@@ -10,7 +10,7 @@ Sie haben das Recht, diesen Vertrag innerhalb von vierzehn Tagen ohne Angabe von
 
 Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses.
 
-Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Digital Service Solutions, FZCO, Dubai Silicon Oasis, Dubai, UAE, E-Mail: info@nachsendeauftrag-buchen.de) mittels einer eindeutigen Erklärung (z. B. per Post oder E-Mail) über Ihre Entscheidung, den Vertrag zu widerrufen, informieren. Hierfür können Sie das beigefügte [Muster-Widerrufsformular](https://postde.ostaadx.ai/Muster.pdf) verwenden, dessen Nutzung jedoch nicht verpflichtend ist.
+Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Digital Service Solutions, FZCO, Dubai Silicon Oasis, Dubai, UAE, E-Mail: info@nachsendeauftrag-buchen.de) mittels einer eindeutigen Erklärung (z. B. per Post oder E-Mail) über Ihre Entscheidung, den Vertrag zu widerrufen, informieren. Hierfür können Sie das beigefügte [Muster-Widerrufsformular](https://nachsendeauftrag-buchen.de/Muster.pdf) verwenden, dessen Nutzung jedoch nicht verpflichtend ist.
 
 Das beigefügte Muster-Widerrufsformular finden Sie auch hier.
 
