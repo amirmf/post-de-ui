@@ -8,14 +8,16 @@ const Impressum = () => {
       <p>
         Digital Service Solutions - FZCO
         <br />
-        Dubai Silicon Oasis, Dubai, UAE
+        Shams Business Center 
+        <br />
+        Sharjah Media City, Sharjah, UAE 
         <br />
         E-Mail:{" "}
         <a href="mailto:info@post-nachsenden.de">info@post-nachsenden.de</a>
       </p>
 
       <h4>Handelsregister</h4>
-      <p>Dubai Free Zone Authority</p>
+      <p>Sharjah Freezone Authority</p>
 
       <h4>Streitbeilegung</h4>
       <p>

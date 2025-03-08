@@ -1,6 +1,7 @@
 // @ts-nocheck 
 import { Form, FormioProvider } from '@formio/react';
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 
 const Submission = () => {
   const [result, setResult] = useState(null);
@@ -17,7 +18,44 @@ const Submission = () => {
   const onSubmitHandler = (submission:any) => {
     setResult(submission);
     setSubmitted(true);
+    Swal.fire({
+      title: "<div style='font-size:22px;'><b>Bestellung erfolgreich abgeschlossen.</b></div>",
+      html: `
+      <div style='text-align:left;line-height:30px;color:black;'>
+        <p>Vielen Dank für Ihr Vertrauen! Ihr Nachsendeauftrag wurde erfolgreich eingerichtet und wird in Kürze aktiviert.</p>
+        <p>Die nächsten Schritte:</p>
+        <p>
+          <ol>
+            <li>
+              <b>Bestätigungs-E-Mail erhalten</b> In wenigen Minuten senden wir Ihnen eine Bestätigungs-E-Mail mit allen Details zu Ihrem Nachsendeauftrag. Bitte prüfen Sie Ihren Posteingang sowie Ihren Spam-Ordner, falls die E-Mail nicht sofort ankommt.\n
+            </li>
+            <li>
+              <b>Automatische Aktivierung</b> Ihr Nachsendeauftrag tritt zum vereinbarten Datum in Kraft. Ab dann wird Ihre Post zuverlässig an Ihre neue Adresse weitergeleitet - ganz ohne weiteres Zutun.\n
+            </li>
+            <li>
+              <b>Entspannt zurücklehnen</b> Alles ist erledigt! Ihre Post erreicht Sie sicher und pünktlich - wir kümmern uns um den Rest.\n
+            </li>
+          </ol>
+        </p>
+        <div>Haben Sie Fragen? Wir sind für Sie da!</div>
+        <div>Unser Kundenservice hilft Ihnen jederzeit gerne weiter.</div>
+        <div>Kontakt: info@nachsendeauftrag-buchen.de</div>
+        <div>Vielen Dank, dass Sie unseren Service nutzen! Wir wünschen Ihnen einen reibungslosen Umzug und alles Gute in Ihrem neuen Zuhause!</div>
+      </div>
+      `,
+      icon: "success",
+      showCloseButton: true,
+      showCancelButton:true,
+      showConfirmButton:false,
+      cancelButtonText: `OK`,
+      width:"70%"
+    }).then((result) => {
+      window.location.href = "/";
+    });
   }
+
+  // 2 emails should be sent inoive & POW
+
   const de ={
     unsavedRowsError: 'Please save all rows before proceeding.',
     invalidRowsError: 'Please correct invalid rows before proceeding.',
@@ -202,7 +240,6 @@ const Submission = () => {
   return (
     <>
       <div>
-        {/* <Form src="https://formio.ostaadx.ai/postnachsendeauftrag" onSubmit={onSubmitHandler} submission={loadData} /> */}
         <Form src="https://formio.ostaadx.ai/postnachsendeauftrag" onSubmit={onSubmitHandler} submission={loadData} options={{
           language:'de',
           i18n:{
