@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from "react";
+function getWeekdaysFromNowToNext3Months() {
+  const today = new Date();
+  const endDate = new Date();
+  endDate.setMonth(today.getMonth() + 3);
+  
+  const dateList = [];
+  let currentDate = new Date(today);
+  currentDate.setDate(currentDate.getDate() + 7);
+  while (currentDate <= endDate) {
+      const dayOfWeek = currentDate.getDay();
+      if (dayOfWeek !== 0 && dayOfWeek !== 6) { // Exclude Sundays (0) and Saturdays (6)
+          const day = String(currentDate.getDate()).padStart(2, '0');
+          const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+          const year = currentDate.getFullYear();
+          // dateList.push(`${day}-${month}-${year}`);
+          dateList.push({"label":`${day}-${month}-${year}`,"value":`${year}-${month}-${day}`});
+      }
+      currentDate.setDate(currentDate.getDate() + 1);
+  }
+  
+  return dateList;
+}
 
-
-const today = new Date();
-    const mockDates:any[] = [];
+    const mockDates:any[] = getWeekdaysFromNowToNext3Months();
     
-    // Adding 3 months to today's date
-    const endDate = new Date(today);
-    endDate.setMonth(today.getMonth() + 3);
-    
-    // Loop through from today to the end date
-    let currentDate = new Date(today);
-    currentDate.setDate(currentDate.getDate() + 1);
-    while (currentDate <= endDate) {
-      currentDate.toISOString().split('T')[0]
-      const day = String(currentDate.getDate()).padStart(2, '0');
-      const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are zero-based
-      const year = currentDate.getFullYear();
-      
-      mockDates.push({"label":`${day}-${month}-${year}`,"value":`${year}-${month}-${day}`});
-        currentDate.setDate(currentDate.getDate() + 1);
-    }
 
 interface SectionProps {
   title: string;
