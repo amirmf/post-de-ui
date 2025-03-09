@@ -3,7 +3,28 @@ import React, { useState } from "react";
 import PostCan from "assets/images/briefkasten.png";
 import { SelectSection } from "./components/selectSection";
 import { useNavigate } from "react-router-dom";
-
+function getWeekdaysFromNowToNext3Months() {
+  const today = new Date();
+  const endDate = new Date();
+  endDate.setMonth(today.getMonth() + 3);
+  
+  const dateList = [];
+  let currentDate = new Date(today);
+  currentDate.setDate(currentDate.getDate() + 7);
+  while (currentDate <= endDate) {
+      const dayOfWeek = currentDate.getDay();
+      if (dayOfWeek !== 0 && dayOfWeek !== 6) { // Exclude Sundays (0) and Saturdays (6)
+          const day = String(currentDate.getDate()).padStart(2, '0');
+          const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+          const year = currentDate.getFullYear();
+          // dateList.push(`${day}-${month}-${year}`);
+          dateList.push({"label":`${day}-${month}-${year}`,"value":`${year}-${month}-${day}`});
+      }
+      currentDate.setDate(currentDate.getDate() + 1);
+  }
+  
+  return dateList;
+}
 const Home = () => {
   const [selectedPrivateCommercial, setSelectedPrivateCommercial] =
     useState<string>("privat");
@@ -150,7 +171,7 @@ const Home = () => {
                 title="Timing"
                 options={[
                   {
-                    label:"Sofort",
+                    label:"Sofort("+getWeekdaysFromNowToNext3Months()[0].label+")",
                     value:"sofort"
                   },
                   {
@@ -160,7 +181,7 @@ const Home = () => {
                 ]}
                 additionalOptions={[
                   {
-                    label:"Sofort",
+                    label:"Sofort("+getWeekdaysFromNowToNext3Months()[0].label+")",
                     value:"sofort"
                   },
                   {
