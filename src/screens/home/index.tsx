@@ -18,7 +18,7 @@ function getWeekdaysFromNowToNext3Months() {
           const month = String(currentDate.getMonth() + 1).padStart(2, '0');
           const year = currentDate.getFullYear();
           // dateList.push(`${day}-${month}-${year}`);
-          dateList.push({"label":`${day}-${month}-${year}`,"value":`${year}-${month}-${day}`});
+          dateList.push({"label":`${day}.${month}.${year}`,"value":`${year}-${month}-${day}`});
       }
       currentDate.setDate(currentDate.getDate() + 1);
   }
@@ -50,7 +50,7 @@ const Home = () => {
     const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are zero-based
     const year = currentDate.getFullYear();
     
-    mockDates.push({"label":`${day}-${month}-${year}`,"value":`${year}-${month}-${day}`});
+    mockDates.push({"label":`${day}.${month}.${year}`,"value":`${year}-${month}-${day}`});
       currentDate.setDate(currentDate.getDate() + 1);
   }
    return (
@@ -171,7 +171,7 @@ const Home = () => {
                 title="Timing"
                 options={[
                   {
-                    label:"Sofort("+getWeekdaysFromNowToNext3Months()[0].label+")",
+                    label:"Sofort ("+getWeekdaysFromNowToNext3Months()[0].label+")",
                     value:"sofort"
                   },
                   {
@@ -181,7 +181,7 @@ const Home = () => {
                 ]}
                 additionalOptions={[
                   {
-                    label:"Sofort("+getWeekdaysFromNowToNext3Months()[0].label+")",
+                    label:"Sofort ("+getWeekdaysFromNowToNext3Months()[0].label+")",
                     value:"sofort"
                   },
                   {
