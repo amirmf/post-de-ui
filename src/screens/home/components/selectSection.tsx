@@ -14,7 +14,7 @@ function getWeekdaysFromNowToNext3Months() {
           const month = String(currentDate.getMonth() + 1).padStart(2, '0');
           const year = currentDate.getFullYear();
           // dateList.push(`${day}-${month}-${year}`);
-          dateList.push({"label":`${day}-${month}-${year}`,"value":`${year}-${month}-${day}`});
+          dateList.push({"label":`${day}.${month}.${year}`,"value":`${year}-${month}-${day}`});
       }
       currentDate.setDate(currentDate.getDate() + 1);
   }
