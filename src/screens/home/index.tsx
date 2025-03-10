@@ -7,6 +7,28 @@ function getWeekdaysFromNowToNext3Months() {
   const today = new Date();
   const endDate = new Date();
   endDate.setMonth(today.getMonth() + 3);
+
+  const dateList = [];
+  let currentDate = new Date(today);
+  currentDate.setDate(currentDate.getDate() + (7 + 14));
+  while (currentDate <= endDate) {
+    const dayOfWeek = currentDate.getDay();
+    if (dayOfWeek !== 0 && dayOfWeek !== 6) { // Exclude Sundays (0) and Saturdays (6)
+      const day = String(currentDate.getDate()).padStart(2, '0');
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+      const year = currentDate.getFullYear();
+      // dateList.push(`${day}-${month}-${year}`);
+      dateList.push({ "label": `${day}.${month}.${year}`, "value": `${year}-${month}-${day}` });
+    }
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
+
+  return dateList;
+}
+function getWeekdaysFromNowToNext3Months_() {
+  const today = new Date();
+  const endDate = new Date();
+  endDate.setMonth(today.getMonth() + 3);
   
   const dateList = [];
   let currentDate = new Date(today);
@@ -25,6 +47,7 @@ function getWeekdaysFromNowToNext3Months() {
   
   return dateList;
 }
+
 const Home = () => {
   const [selectedPrivateCommercial, setSelectedPrivateCommercial] =
     useState<string>("privat");
@@ -35,28 +58,11 @@ const Home = () => {
     useState<string>("umzug");
   const navigate = useNavigate();
   const today = new Date();
-  const mockDates:any[] = [];
-  
-  // Adding 3 months to today's date
-  const endDate = new Date(today);
-  endDate.setMonth(today.getMonth() + 3);
-  
-  // Loop through from today to the end date
-  let currentDate = new Date(today);
-  currentDate.setDate(currentDate.getDate() + 1);
-  while (currentDate <= endDate) {
-    currentDate.toISOString().split('T')[0]
-    const day = String(currentDate.getDate()).padStart(2, '0');
-    const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are zero-based
-    const year = currentDate.getFullYear();
-    
-    mockDates.push({"label":`${day}.${month}.${year}`,"value":`${year}-${month}-${day}`});
-      currentDate.setDate(currentDate.getDate() + 1);
-  }
-   return (
+  const mockDates: any[] = getWeekdaysFromNowToNext3Months();
+  return (
     <div
-    className="home-holder"
-    style={{
+      className="home-holder"
+      style={{
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -80,7 +86,7 @@ const Home = () => {
           <h2
             style={{
               marginBottom: 5,
-              wordBreak:"break-word"
+              wordBreak: "break-word"
             }}
           >
             Post Nachsendeauftrag
@@ -88,8 +94,8 @@ const Home = () => {
           <p
             style={{
               marginTop: 0,
-              paddingBottom:10,
-              marginBottom:10,
+              paddingBottom: 10,
+              marginBottom: 10,
               borderBottom: "1px solid rgb(201, 214, 223)",
             }}
           >
@@ -109,19 +115,19 @@ const Home = () => {
                 title="Forwarding Options"
                 options={[
                   {
-                    label:"Privater Nachsendeauftrag",
-                    value:"privat"
+                    label: "Privater Nachsendeauftrag",
+                    value: "privat"
                   },
                   {
-                    label:"Gewerblicher Nachsendeauftrag",
-                    value:"geschaftlich"
+                    label: "Gewerblicher Nachsendeauftrag",
+                    value: "geschaftlich"
                   },
                 ]}
                 onSelect={setSelectedPrivateCommercial}
                 selectedValue={selectedPrivateCommercial}
               />
-              </div>
-              <div
+            </div>
+            <div
               style={{
                 justifyContent: "space-between",
                 borderBottom: "1px solid rgb(201, 214, 223)",
@@ -129,76 +135,78 @@ const Home = () => {
                 paddingBottom: 10,
               }}
             >
-            <SelectSection
-              title="Absence Options"
+              <SelectSection
+              title="Timing"
               options={[
                 {
-                  label:"Umzug",
-                  value:"umzug"
+                  label: "Sofort (" + getWeekdaysFromNowToNext3Months_()[0].label + ")",
+                  value: "sofort"
                 },
                 {
-                  label:"Vorübergehende Abwesenheit",
-                  value:"vorubergehendeAbwesenheit"
-                },
-                {
-                  label:"Sterbefall",
-                  value:"sterbefall"
-                },
+                  label: "Späterer Startzeitpunkt",
+                  value: "spatererStartzeitpunkt"
+                }
               ]}
-              onSelect={setSelectedRelocation}
-              selectedValue={selectedRelocation}
+              additionalOptions={[
+                {
+                  label: "Sofort (" + getWeekdaysFromNowToNext3Months()[0].label + ")",
+                  value: "sofort"
+                },
+                {
+                  label: "Späterer Startzeitpunkt",
+                  value: "spatererStartzeitpunkt"
+                }
+              ]}
+              onSelect={setSelectedTiming}
+              selectedValue={selectedTiming}
             />
-            {selectedRelocation=="vorubergehendeAbwesenheit" && (
-                    <div style={{
-                      paddingLeft:"20px"
-                    }}>
-                      <label style={{marginTop:10}} htmlFor="date-options2" >Wieder zustellen ab:</label>
-                      <select
-                      style={{
-                        marginTop:0
-                      }}
-                        id="date-options2">
-                        {mockDates.map((date, index) => (
-                              <option key={date['value']} value={date['label']}>
-                              {date['label']}
-                            </option>
-                        ))}
-                      </select>
-                    </div>
-                  )}
             </div>
-            <SelectSection
-                title="Timing"
+            
+              <SelectSection
+                title="Absence Options"
                 options={[
                   {
-                    label:"Sofort ("+getWeekdaysFromNowToNext3Months()[0].label+")",
-                    value:"sofort"
+                    label: "Umzug",
+                    value: "umzug"
                   },
                   {
-                    label:"Späterer Startzeitpunkt",
-                    value:"spatererStartzeitpunkt"
-                  }
-                ]}
-                additionalOptions={[
-                  {
-                    label:"Sofort ("+getWeekdaysFromNowToNext3Months()[0].label+")",
-                    value:"sofort"
+                    label: "Vorübergehende Abwesenheit",
+                    value: "vorubergehendeAbwesenheit"
                   },
                   {
-                    label:"Späterer Startzeitpunkt",
-                    value:"spatererStartzeitpunkt"
-                  }
+                    label: "Sterbefall",
+                    value: "sterbefall"
+                  },
                 ]}
-                onSelect={setSelectedTiming}
-                selectedValue={selectedTiming}
+                onSelect={setSelectedRelocation}
+                selectedValue={selectedRelocation}
               />
+              {selectedRelocation == "vorubergehendeAbwesenheit" && (
+                <div style={{
+                  paddingLeft: "20px"
+                }}>
+                  <label style={{ marginTop: 10 }} htmlFor="date-options2" >Wieder zustellen ab:</label>
+                  <select
+                    style={{
+                      marginTop: 0
+                    }}
+                    id="date-options2">
+                    {mockDates.map((date, index) => (
+                      <option key={date['value']} value={date['label']}>
+                        {date['label']}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
+           
           </form>
         </div>
       </div>
 
       <button
         onClick={() => {
-          navigate(`/submission?artDerNachsendung=${selectedPrivateCommercial}&art=${selectedRelocation}&zeitpunkt=${selectedTiming}&spatererStartzeitpunkt=${!!document.getElementById("date-options")?document.getElementById("date-options").options[document.getElementById("date-options").selectedIndex].value:''}&wiederZustellenAb=${!!document.getElementById("date-options2")?document.getElementById("date-options2").options[document.getElementById("date-options2").selectedIndex].value:''}`);
+          navigate(`/submission?artDerNachsendung=${selectedPrivateCommercial}&art=${selectedRelocation}&zeitpunkt=${selectedTiming}&spatererStartzeitpunkt=${!!document.getElementById("date-options") ? document.getElementById("date-options").options[document.getElementById("date-options").selectedIndex].value : ''}&wiederZustellenAb=${!!document.getElementById("date-options2") ? document.getElementById("date-options2").options[document.getElementById("date-options2").selectedIndex].value : ''}`);
         }}
       >
         Jetzt online beantragen
