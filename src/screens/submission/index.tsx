@@ -3,6 +3,52 @@ import { Form, FormioProvider } from '@formio/react';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
 
+function getWeekdaysFromNowToNext3Months() {
+  const today = new Date();
+  const endDate = new Date();
+  endDate.setMonth(today.getMonth() + 3);
+
+  const dateList = [];
+  let currentDate = new Date(today);
+  currentDate.setDate(currentDate.getDate() + (7 + 14));
+  while (currentDate <= endDate) {
+    const dayOfWeek = currentDate.getDay();
+    if (dayOfWeek !== 0 && dayOfWeek !== 6) { // Exclude Sundays (0) and Saturdays (6)
+      const day = String(currentDate.getDate()).padStart(2, '0');
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+      const year = currentDate.getFullYear();
+      // dateList.push(`${day}-${month}-${year}`);
+      dateList.push({ "label": `${day}.${month}.${year}`, "value": `${year}-${month}-${day}` });
+    }
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
+
+  return dateList;
+}
+
+function getWeekdaysFromNowToNext3Months_() {
+  const today = new Date();
+  const endDate = new Date();
+  endDate.setMonth(today.getMonth() + 3);
+  
+  const dateList = [];
+  let currentDate = new Date(today);
+  currentDate.setDate(currentDate.getDate() + 7);
+  while (currentDate <= endDate) {
+      const dayOfWeek = currentDate.getDay();
+      if (dayOfWeek !== 0 && dayOfWeek !== 6) { // Exclude Sundays (0) and Saturdays (6)
+          const day = String(currentDate.getDate()).padStart(2, '0');
+          const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+          const year = currentDate.getFullYear();
+          // dateList.push(`${day}-${month}-${year}`);
+          dateList.push({"label":`${day}.${month}.${year}`,"value":`${year}-${month}-${day}`});
+      }
+      currentDate.setDate(currentDate.getDate() + 1);
+  }
+  
+  return dateList;
+}
+
 const Submission = () => {
   const [result, setResult] = useState(null);
   const [submitted, setSubmitted] = useState(false);
@@ -14,6 +60,8 @@ const Submission = () => {
   loadData.data.zeitpunkt = urlParams.get('zeitpunkt');
   loadData.data.spatererStartzeitpunkt = urlParams.get('spatererStartzeitpunkt');
   loadData.data.wiederZustellenAb = urlParams.get('wiederZustellenAb');
+  if(!loadData.data.spatererStartzeitpunkt) 
+    loadData.data.spatererStartzeitpunkt = getWeekdaysFromNowToNext3Months_()[0].value;
 
   const onSubmitHandler = (submission:any) => {
     setResult(submission);
