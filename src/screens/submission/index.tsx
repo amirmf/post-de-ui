@@ -279,7 +279,7 @@ const Submission = () => {
     maxLength : "{{field}} must be shorter than {{length}} characters.",
     min : "{{field}} cannot be less than {{min}}.",
     minLength : "{{field}} must be longer than {{length}} characters.",
-    next : "Nächste",
+    next : "Weiter",
     pattern : "{{field}} does not match the pattern {{pattern}}",
     previous : "Vorherige",
     required : "{{field}} ist erforderlich"
