@@ -86,6 +86,7 @@ const Home = () => {
           <h2
             style={{
               marginBottom: 5,
+              marginTop:"15px",
               wordBreak: "break-word"
             }}
           >
@@ -216,7 +217,7 @@ const Home = () => {
           textAlign: "justify"
         }}
       >
-        Unser Service ermöglicht Ihnen die Online-Beantragung eines Nachsendeauftrags - für Privatpersonen und Gewerbetreibende. Schnell, sicher und unkompliziert.
+        Unser Service ermöglicht Ihnen die Online-Beantragung eines Nachsendeauftrags. Privatpersonen können schon ab nur 9,99€ im Monat einen Nachsendeauftrag stellen, Gewerbetreibende schon ab 10,99€ im Monat. Schnell, zuverlässig und unkompliziert.
       </p>
     </div>
   );

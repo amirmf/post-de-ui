@@ -46,8 +46,10 @@ const MainLayout: React.FC = () => {
         <div
           style={{ padding: 15, marginBottom: 20, width: "85%",margin:"50px auto 40px auto" }}
         >
+          <img src="/offerhome.png" alt="offer" className="offerhome"/>
           <div
             style={{
+              clear:"both",
               backgroundColor: "#f2f2f2c7",
               padding: "20px 30px",
               borderRadius: "5px",
