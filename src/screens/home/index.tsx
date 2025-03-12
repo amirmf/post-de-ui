@@ -86,6 +86,7 @@ const Home = () => {
           <h2
             style={{
               marginBottom: 5,
+              marginTop:"15px",
               wordBreak: "break-word"
             }}
           >

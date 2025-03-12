@@ -21,8 +21,10 @@
 .home-holder p,.home-holder div{
     font-size: 20px,
 }
-
-.home-holder button{
+.btn-wizard-nav-submit{
+    display:none;
+}
+.home-holder button,.btn-wizard-nav-next{
     background-color: black; font-size: 18px; border-radius: 7px; padding: 10px; border: 1px solid transparent; color: white; cursor: pointer; align-self: flex-end; margin-top: 20px; font-weight: 900;
 
 }
@@ -58,8 +60,18 @@ nav a{
 nav > p{
     font: 12px;
 }
+.offerhome{
+    width:300px;
+    float: right;
+    margin-bottom: -27px;
+}
 @media (max-width:800px)  { 
 
+    .offerhome{
+        width:200px;
+        float: right;
+        margin-bottom: -27px;
+    }
     .home-holder h2{
         font-size: 21px,
     }
