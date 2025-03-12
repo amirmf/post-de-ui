@@ -24,7 +24,7 @@
 .btn-wizard-nav-submit{
     display:none;
 }
-.home-holder button,.btn-wizard-nav-next{
+.home-holder button,.btn-wizard-nav-next, .home-holder button:hover{
     background-color: black; font-size: 18px; border-radius: 7px; padding: 10px; border: 1px solid transparent; color: white; cursor: pointer; align-self: flex-end; margin-top: 20px; font-weight: 900;
 
 }
@@ -78,7 +78,7 @@ nav > p{
     .home-holder p,.home-holder div,.home-holder label{
         font-size: 12px,
     }
-    .home-holder button{
+    .home-holder button,.home-holder button:hover{
         margin:20px auto; float: none; background-color: black; font-size: 12px; border-radius: 7px; padding: 5px; border: 1px solid transparent; color: white; cursor: pointer; align-self: flex-end; font-weight: 900;
         width: 100%;
     }
