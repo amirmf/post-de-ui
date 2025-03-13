@@ -99,7 +99,7 @@ const Submission = () => {
     
     if (window.gtag) {
       window.gtag('config', 'AW-11453395597');
-      window.gtag("event", "purchase", {
+      window.gtag("event", "conversion", {
         send_to: "AW-11453395597/eq1ICOPbiaoaEI3ls9Uq",
         value: price,
         currency: "EUR",
