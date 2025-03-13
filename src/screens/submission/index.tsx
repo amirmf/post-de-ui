@@ -66,6 +66,7 @@ const Submission = () => {
 
   const onLoadHandler = (sub: any) => {
     if (window.gtag) {
+      window.gtag('config', 'AW-11453395597');
       window.gtag("event", "page_view", {
         send_to: "AW-11453395597",
         page_title: "form",
@@ -75,6 +76,7 @@ const Submission = () => {
   };
   const onNextHandler = (sub: any) => {
     if (window.gtag) {
+      window.gtag('config', 'AW-11453395597');
       window.gtag("event", "button_click", {
         send_to: "AW-11453395597",
         button_name: "next",
@@ -95,6 +97,7 @@ const Submission = () => {
       price = 131.88;
     }
     if (window.gtag) {
+      window.gtag('config', 'AW-11453395597');
       window.gtag("event", "purchase", {
         send_to: "AW-11453395597/Purchased",
         value: price,

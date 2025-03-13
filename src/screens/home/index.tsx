@@ -61,6 +61,7 @@ const Home = () => {
   const mockDates: any[] = getWeekdaysFromNowToNext3Months();
   useEffect(() => {
     if (window.gtag) {
+      window.gtag('config', 'AW-11453395597');
       window.gtag("event", "page_view", {
         send_to: "AW-11453395597",
         page_title: "home",
@@ -218,6 +219,7 @@ const Home = () => {
       <button
         onClick={() => {
           if (window.gtag) {
+            window.gtag('config', 'AW-11453395597');
             window.gtag("event", "button_click", {
               send_to: "AW-11453395597",
               button_name: "start",
