@@ -77,8 +77,8 @@ const Submission = () => {
   const onNextHandler = (sub: any) => {
     if (window.gtag) {
       window.gtag('config', 'AW-11453395597');
-      window.gtag("event", "button_click", {
-        send_to: "AW-11453395597",
+      window.gtag("event", "conversion", {
+        send_to: "AW-11453395597/q4KaCPT9_akaEI3ls9Uq",
         button_name: "next",
       });
     }
