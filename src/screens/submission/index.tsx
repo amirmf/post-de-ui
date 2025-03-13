@@ -113,6 +113,10 @@ const Submission = () => {
         transaction_id: submission._id,
         user_email: submission.data.eMailAdresse ? submission.data.eMailAdresse : submission.data.eMailAdresse1
       });
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-11453395597/KPwBCJOnnKoaEI3ls9Uq',
+        'transaction_id': submission._id
+      });
     }
     Swal.fire({
       title: "<div style='font-size:22px;'><b>Bestellung erfolgreich abgeschlossen.</b></div>",
