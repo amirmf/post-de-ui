@@ -96,10 +96,11 @@ const Submission = () => {
     } else if (submission.data.artDerNachsendung != "privat" && (submission.data.nachsendeauftragFur1 + '') == "12m") {
       price = 131.88;
     }
+    
     if (window.gtag) {
       window.gtag('config', 'AW-11453395597');
       window.gtag("event", "purchase", {
-        send_to: "AW-11453395597/Purchased",
+        send_to: "AW-11453395597/eq1ICOPbiaoaEI3ls9Uq",
         value: price,
         currency: "EUR",
         transaction_id: submission._id,
