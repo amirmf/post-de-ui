@@ -224,8 +224,6 @@ const Home = () => {
               send_to: "AW-11453395597/tMKZCNvw_akaEI3ls9Uq",
               button_name: "start",
             });
-          if (window.gtag) {
-            window.gtag('config', 'AW-11453395597');
             window.gtag("event", "amir", {
               send_to: "AW-11453395597",
               button_name: "start",
