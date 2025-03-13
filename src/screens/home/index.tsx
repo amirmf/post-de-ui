@@ -224,6 +224,10 @@ const Home = () => {
               send_to: "AW-11453395597/tMKZCNvw_akaEI3ls9Uq",
               button_name: "start",
             });
+            window.gtag("event", "amir", {
+              send_to: "AW-11453395597",
+              button_name: "start",
+            });
           }
           navigate(`/submission?artDerNachsendung=${selectedPrivateCommercial}&art=${selectedRelocation}&zeitpunkt=${selectedTiming}&spatererStartzeitpunkt=${!!document.getElementById("date-options") ? document.getElementById("date-options").options[document.getElementById("date-options").selectedIndex].value : ''}&wiederZustellenAb=${!!document.getElementById("date-options2") ? document.getElementById("date-options2").options[document.getElementById("date-options2").selectedIndex].value : ''}`);
         }}
