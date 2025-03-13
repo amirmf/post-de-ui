@@ -1,5 +1,5 @@
 // @ts-nocheck 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PostCan from "assets/images/briefkasten.png";
 import { SelectSection } from "./components/selectSection";
 import { useNavigate } from "react-router-dom";
@@ -59,6 +59,17 @@ const Home = () => {
   const navigate = useNavigate();
   const today = new Date();
   const mockDates: any[] = getWeekdaysFromNowToNext3Months();
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('config', 'AW-11453395597');
+      window.gtag("event", "page_view", {
+        send_to: "AW-11453395597",
+        page_title: "home",
+        page_path: "/",
+      });
+    }
+  }, []);
+  
   return (
     <div
       className="home-holder"
@@ -207,6 +218,13 @@ const Home = () => {
 
       <button
         onClick={() => {
+          if (window.gtag) {
+            window.gtag('config', 'AW-11453395597');
+            window.gtag("event", "button_click", {
+              send_to: "AW-11453395597",
+              button_name: "start",
+            });
+          }
           navigate(`/submission?artDerNachsendung=${selectedPrivateCommercial}&art=${selectedRelocation}&zeitpunkt=${selectedTiming}&spatererStartzeitpunkt=${!!document.getElementById("date-options") ? document.getElementById("date-options").options[document.getElementById("date-options").selectedIndex].value : ''}&wiederZustellenAb=${!!document.getElementById("date-options2") ? document.getElementById("date-options2").options[document.getElementById("date-options2").selectedIndex].value : ''}`);
         }}
       >

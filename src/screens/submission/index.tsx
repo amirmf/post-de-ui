@@ -30,22 +30,22 @@ function getWeekdaysFromNowToNext3Months_() {
   const today = new Date();
   const endDate = new Date();
   endDate.setMonth(today.getMonth() + 3);
-  
+
   const dateList = [];
   let currentDate = new Date(today);
   currentDate.setDate(currentDate.getDate() + 7);
   while (currentDate <= endDate) {
-      const dayOfWeek = currentDate.getDay();
-      if (dayOfWeek !== 0 && dayOfWeek !== 6) { // Exclude Sundays (0) and Saturdays (6)
-          const day = String(currentDate.getDate()).padStart(2, '0');
-          const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-          const year = currentDate.getFullYear();
-          // dateList.push(`${day}-${month}-${year}`);
-          dateList.push({"label":`${day}.${month}.${year}`,"value":`${year}-${month}-${day}`});
-      }
-      currentDate.setDate(currentDate.getDate() + 1);
+    const dayOfWeek = currentDate.getDay();
+    if (dayOfWeek !== 0 && dayOfWeek !== 6) { // Exclude Sundays (0) and Saturdays (6)
+      const day = String(currentDate.getDate()).padStart(2, '0');
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+      const year = currentDate.getFullYear();
+      // dateList.push(`${day}-${month}-${year}`);
+      dateList.push({ "label": `${day}.${month}.${year}`, "value": `${year}-${month}-${day}` });
+    }
+    currentDate.setDate(currentDate.getDate() + 1);
   }
-  
+
   return dateList;
 }
 
@@ -53,19 +53,66 @@ const Submission = () => {
   const [result, setResult] = useState(null);
   const [submitted, setSubmitted] = useState(false);
 
-  const loadData = {data:{}};
+  const loadData = { data: {} };
   const urlParams = new URLSearchParams(window.location.search);
   loadData.data.artDerNachsendung = urlParams.get('artDerNachsendung');
   loadData.data.art = urlParams.get('art');
   loadData.data.zeitpunkt = urlParams.get('zeitpunkt');
   loadData.data.spatererStartzeitpunkt = urlParams.get('spatererStartzeitpunkt');
   loadData.data.wiederZustellenAb = urlParams.get('wiederZustellenAb');
-  if(!loadData.data.spatererStartzeitpunkt) 
+  if (!loadData.data.spatererStartzeitpunkt)
     loadData.data.spatererStartzeitpunkt = getWeekdaysFromNowToNext3Months_()[0].value;
 
-  const onSubmitHandler = (submission:any) => {
+
+  const onLoadHandler = (sub: any) => {
+    if (window.gtag) {
+      window.gtag('config', 'AW-11453395597');
+      window.gtag("event", "page_view", {
+        send_to: "AW-11453395597",
+        page_title: "form",
+        page_path: "/submission",
+      });
+    }
+  };
+  const onNextHandler = (sub: any) => {
+    if (window.gtag) {
+      window.gtag('config', 'AW-11453395597');
+      window.gtag("event", "button_click", {
+        send_to: "AW-11453395597",
+        button_name: "next",
+      });
+    }
+  };
+  const onSubmitHandler = (submission: any) => {
     setResult(submission);
     setSubmitted(true);
+    let price = 107.94;
+    if (submission.data.artDerNachsendung == "privat" && (submission.data.nachsendeauftragFur + '') == "6m") {
+      price = 107.94;
+    } else if (submission.data.artDerNachsendung == "privat" && (submission.data.nachsendeauftragFur + '') == "12m") {
+      price = 119.88;
+    } else if (submission.data.artDerNachsendung != "privat" && (submission.data.nachsendeauftragFur1 + '') == "6m") {
+      price = 117.78;
+    } else if (submission.data.artDerNachsendung != "privat" && (submission.data.nachsendeauftragFur1 + '') == "12m") {
+      price = 131.88;
+    }
+    if (window.gtag) {
+      window.gtag('config', 'AW-11453395597');
+      window.gtag("event", "purchase", {
+        send_to: "AW-11453395597/Purchased",
+        value: price,
+        currency: "EUR",
+        transaction_id: submission._id,
+        user_email: submission.data.eMailAdresse ? submission.data.eMailAdresse : submission.data.eMailAdresse1
+      });
+      window.gtag("event", "purchase_event", {
+        send_to: "AW-11453395597",
+        value: price,
+        currency: "EUR",
+        transaction_id: submission._id,
+        user_email: submission.data.eMailAdresse ? submission.data.eMailAdresse : submission.data.eMailAdresse1
+      });
+    }
     Swal.fire({
       title: "<div style='font-size:22px;'><b>Bestellung erfolgreich abgeschlossen.</b></div>",
       html: `
@@ -93,10 +140,10 @@ const Submission = () => {
       `,
       icon: "success",
       showCloseButton: true,
-      showCancelButton:true,
-      showConfirmButton:false,
+      showCancelButton: true,
+      showConfirmButton: false,
       cancelButtonText: `OK`,
-      width:"70%"
+      width: "70%"
     }).then((result) => {
       window.location.href = "/";
     });
@@ -104,7 +151,7 @@ const Submission = () => {
 
   // 2 emails should be sent inoive & POW
 
-  const de ={
+  const de = {
     unsavedRowsError: 'Please save all rows before proceeding.',
     invalidRowsError: 'Please correct invalid rows before proceeding.',
     invalidRowError: 'Invalid row. Please correct it or delete.',
@@ -172,9 +219,9 @@ const Submission = () => {
     restoreDraftError: 'Unable to restore draft.',
     time: 'Invalid time',
     cancelButtonAriaLabel: 'Cancel button. Click to reset the form',
-    previousButtonAriaLabel:'Previous button. Click to go back to the previous tab',
-    nextButtonAriaLabel:'Next button. Click to go to the next tab',
-    submitButtonAriaLabel:'Submit Form button. Click to submit the form',
+    previousButtonAriaLabel: 'Previous button. Click to go back to the previous tab',
+    nextButtonAriaLabel: 'Next button. Click to go to the next tab',
+    submitButtonAriaLabel: 'Submit Form button. Click to submit the form',
     reCaptchaTokenValidationError: 'ReCAPTCHA: Token validation error',
     reCaptchaTokenNotSpecifiedError: 'ReCAPTCHA: Token is not specified in submission',
     apiKey: 'API Key is not unique: {{key}}',
@@ -195,7 +242,7 @@ const Submission = () => {
     builderUniqueError: `You cannot add more than one {{componentKeyOrTitle}} component to one page.`,
     pageNotFound: 'Page not found',
     noDragInfoError: 'There is no Drag Info available for either dragged or sibling element',
-    addonSupportTypeError:'Addon {{label}} does not support component of type {{type}}',
+    addonSupportTypeError: 'Addon {{label}} does not support component of type {{type}}',
     setPathError: 'Should not be setting the path of a component.',
     calculatedPathDeprecation: 'component.calculatedPath was deprecated, use component.path instead.',
     unknownTemplate: 'Unknown template: {{name}}',
@@ -224,7 +271,7 @@ const Submission = () => {
     noDataProvided: 'No data provided',
     subformSubmissionLoadingError: 'Unable to load subform submission {{submissionId}}:',
     noDelimiterSet: 'In order for thousands separator to work properly, you must set the delimiter to true in the component json',
-    noSiteKey:'There is no Site Key specified in settings in form JSON',
+    noSiteKey: 'There is no Site Key specified in settings in form JSON',
     failedToNormalize: 'Failed to normalize value',
     failedToCompareItems: 'Error while comparing items',
     editorFocusError: 'An editor did not initialize properly when trying to focus:',
@@ -246,7 +293,7 @@ const Submission = () => {
     yes: 'Yes',
     no: 'No',
     wantToClearData: 'Do you want to clear data?',
-    yesDelete:'Yes, delete it',
+    yesDelete: 'Yes, delete it',
     waitFileProcessing: 'Processing file. Please wait...',
     wrongFileType: 'File is the wrong type; it must be {{ pattern }}',
     fileTooSmall: 'File is too small; it must be at least {{ size }}',
@@ -268,32 +315,32 @@ const Submission = () => {
     noChoices: 'No choices to choose from',
     typeToSearch: 'Type to search',
     loading: 'Loading',
-    
-    error : "Bitte vervollständigen sie die Pflichtfelder.",
-    submitError : "Bitte vervollständigen sie die Pflichtfelder.",
-    invalid_date :"{{field}} is not a valid date.",
-    invalid_email : "{{field}} muss eine gültige E-Mail-Adresse sein.",
-    invalid_regex : "{{field}} does not match the pattern {{regex}}.",
-    mask : "{{field}} does not match the mask.",
-    max : "{{field}} cannot be greater than {{max}}.",
-    maxLength : "{{field}} must be shorter than {{length}} characters.",
-    min : "{{field}} cannot be less than {{min}}.",
-    minLength : "{{field}} must be longer than {{length}} characters.",
-    next : "Weiter",
-    pattern : "{{field}} does not match the pattern {{pattern}}",
-    previous : "Vorherige",
-    required : "{{field}} ist erforderlich"
+
+    error: "Bitte vervollständigen sie die Pflichtfelder.",
+    submitError: "Bitte vervollständigen sie die Pflichtfelder.",
+    invalid_date: "{{field}} is not a valid date.",
+    invalid_email: "{{field}} muss eine gültige E-Mail-Adresse sein.",
+    invalid_regex: "{{field}} does not match the pattern {{regex}}.",
+    mask: "{{field}} does not match the mask.",
+    max: "{{field}} cannot be greater than {{max}}.",
+    maxLength: "{{field}} must be shorter than {{length}} characters.",
+    min: "{{field}} cannot be less than {{min}}.",
+    minLength: "{{field}} must be longer than {{length}} characters.",
+    next: "Weiter",
+    pattern: "{{field}} does not match the pattern {{pattern}}",
+    previous: "Vorherige",
+    required: "{{field}} ist erforderlich"
   };
 
   return (
     <>
       <div>
-        <Form src="https://formio.ostaadx.ai/postnachsendeauftrag" onSubmit={onSubmitHandler} submission={loadData} options={{
-          language:'de',
-          i18n:{
-            de:de
+        <Form src="https://formio.ostaadx.ai/postnachsendeauftrag" onFormLoad={{ onLoadHandler }} onSubmit={onSubmitHandler} onNextPage={onNextHandler} submission={loadData} options={{
+          language: 'de',
+          i18n: {
+            de: de
           }
-        }}  />
+        }} />
       </div>
     </>
   );
