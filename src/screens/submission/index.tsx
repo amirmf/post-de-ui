@@ -66,9 +66,9 @@ const Submission = () => {
 
   const onLoadHandler = (sub: any) => {
     if (window.gtag) {
-      window.gtag('config', 'AW-11453395597');
+      // window.gtag('config', 'AW-11453395597');
       window.gtag("event", "page_view", {
-        send_to: "AW-11453395597",
+        // send_to: "AW-11453395597",
         page_title: "form",
         page_path: "/submission",
       });
@@ -79,6 +79,9 @@ const Submission = () => {
       window.gtag('config', 'AW-11453395597');
       window.gtag("event", "conversion", {
         send_to: "AW-11453395597/q4KaCPT9_akaEI3ls9Uq",
+        button_name: "next",
+      });
+      window.gtag("event", "button_click", {
         button_name: "next",
       });
     }
@@ -107,7 +110,7 @@ const Submission = () => {
         user_email: submission.data.eMailAdresse ? submission.data.eMailAdresse : submission.data.eMailAdresse1
       });
       window.gtag("event", "purchase_event", {
-        send_to: "AW-11453395597",
+        // send_to: "AW-11453395597",
         value: 30,
         currency: "EUR",
         transaction_id: submission._id,
