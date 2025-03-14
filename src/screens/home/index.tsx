@@ -223,11 +223,7 @@ const Home = () => {
             window.gtag("event", "conversion", {
               send_to: "AW-11453395597/tMKZCNvw_akaEI3ls9Uq",
               button_name: "start",
-            });
-            window.gtag("event", "amir", {
-              send_to: "AW-11453395597",
-              button_name: "start",
-            });
+            }); 
           }
           navigate(`/submission?artDerNachsendung=${selectedPrivateCommercial}&art=${selectedRelocation}&zeitpunkt=${selectedTiming}&spatererStartzeitpunkt=${!!document.getElementById("date-options") ? document.getElementById("date-options").options[document.getElementById("date-options").selectedIndex].value : ''}&wiederZustellenAb=${!!document.getElementById("date-options2") ? document.getElementById("date-options2").options[document.getElementById("date-options2").selectedIndex].value : ''}`);
         }}
@@ -239,7 +235,7 @@ const Home = () => {
           textAlign: "justify"
         }}
       >
-        Unser Service ermöglicht Ihnen die Online-Beantragung eines Nachsendeauftrags. Privatpersonen können schon ab nur 9,99€ im Monat einen Nachsendeauftrag stellen, Gewerbetreibende schon ab 10,99€ im Monat. Schnell, zuverlässig und unkompliziert.
+        Unser Service ermöglicht Ihnen die Online-Beantragung eines Nachsendeauftrags für Privatpersonen und Gewerbetreibende. Schnell, zuverlässig und unkompliziert.
       </p>
     </div>
   );
