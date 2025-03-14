@@ -336,7 +336,7 @@ const Submission = () => {
   return (
     <>
       <div>
-        <Form src="https://formio.ostaadx.ai/postnachsendeauftrag" onFormLoad={{ onLoadHandler }} onSubmit={onSubmitHandler} onNextPage={onNextHandler} submission={loadData} options={{
+        <Form src="https://formio.ostaadx.ai/postnachsendeauftrag" onFormLoad={ onLoadHandler } onSubmit={onSubmitHandler} onNextPage={onNextHandler} submission={loadData} options={{
           language: 'de',
           i18n: {
             de: de
