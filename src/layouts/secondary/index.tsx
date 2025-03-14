@@ -25,7 +25,7 @@ const SecondaryLayout: React.FC = () => {
         }}
       >
         <div
-          style={{ padding: 15, marginBottom: 20, maxWidth: "900px", width: "85%", margin:"0 auto" }}
+          style={{ padding: "15px 0", marginBottom: 20, maxWidth: "850px", width: "100%", margin:"0 auto" }}
         >
           <div
             style={{
