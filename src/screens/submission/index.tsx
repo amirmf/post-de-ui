@@ -101,21 +101,17 @@ const Submission = () => {
       window.gtag('config', 'AW-11453395597');
       window.gtag("event", "conversion", {
         send_to: "AW-11453395597/eq1ICOPbiaoaEI3ls9Uq",
-        value: price,
+        value: 30,
         currency: "EUR",
         transaction_id: submission._id,
         user_email: submission.data.eMailAdresse ? submission.data.eMailAdresse : submission.data.eMailAdresse1
       });
       window.gtag("event", "purchase_event", {
         send_to: "AW-11453395597",
-        value: price,
+        value: 30,
         currency: "EUR",
         transaction_id: submission._id,
         user_email: submission.data.eMailAdresse ? submission.data.eMailAdresse : submission.data.eMailAdresse1
-      });
-      window.gtag('event', 'conversion', {
-        'send_to': 'AW-11453395597/KPwBCJOnnKoaEI3ls9Uq',
-        'transaction_id': submission._id
       });
     }
     Swal.fire({
