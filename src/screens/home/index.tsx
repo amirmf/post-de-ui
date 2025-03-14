@@ -235,7 +235,7 @@ const Home = () => {
           textAlign: "justify"
         }}
       >
-        Unser Service ermöglicht Ihnen die Online-Beantragung eines Nachsendeauftrags für Privatpersonen und Gewerbetreibende. Schnell, zuverlässig und unkompliziert.
+        Unser Service ermöglicht die Online-Beantragung eines Nachsendeauftrages für Privatpersonen und Gewerbetreibende. Schnell, zuverlässig und unkompliziert.
       </p>
     </div>
   );
