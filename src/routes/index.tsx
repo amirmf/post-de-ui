@@ -11,6 +11,7 @@ import Impressum from "screens/impressum";
 import MainLayout from "layouts/main";
 import SecondaryLayout from "layouts/secondary";
 import Submission from "screens/submission";
+import Success from "screens/success";
 
 const routes = createBrowserRouter([
   {
@@ -62,6 +63,10 @@ const routes = createBrowserRouter([
       {
         path: "submission",
         element: <Submission />,
+      },
+      {
+        path: "success",
+        element: <Success />,
       },
     ],
   },
