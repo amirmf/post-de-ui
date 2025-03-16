@@ -89,15 +89,15 @@ const Submission = () => {
   const onSubmitHandler = (submission: any) => {
     setResult(submission);
     setSubmitted(true);
-    let price = 107.94;
+    let price = 119.40;
     if (submission.data.artDerNachsendung == "privat" && (submission.data.nachsendeauftragFur + '') == "6m") {
-      price = 107.94;
+      price = 119.40;
     } else if (submission.data.artDerNachsendung == "privat" && (submission.data.nachsendeauftragFur + '') == "12m") {
-      price = 119.88;
+      price = 150.00;
     } else if (submission.data.artDerNachsendung != "privat" && (submission.data.nachsendeauftragFur1 + '') == "6m") {
-      price = 117.78;
+      price = 151.98;
     } else if (submission.data.artDerNachsendung != "privat" && (submission.data.nachsendeauftragFur1 + '') == "12m") {
-      price = 131.88;
+      price = 174.00;
     }
     
     if (window.gtag) {
