@@ -13,7 +13,7 @@ const Impressum = () => {
         Sharjah Media City, Sharjah, UAE 
         <br />
         E-Mail:{" "}
-        <a href="mailto:info@post-nachsenden.de">info@post-nachsenden.de</a>
+        <a href="mailto:nachsendeauftrag-buchen.de">nachsendeauftrag-buchen.de</a>
       </p>
 
       <h4>Handelsregister</h4>
