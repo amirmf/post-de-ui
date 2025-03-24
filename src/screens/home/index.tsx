@@ -217,10 +217,10 @@ const Home = () => {
       <button
         onClick={() => {
           if (window.gtag) {
-            window.gtag("event", "conversion", {
-              send_to: "AW-11453395597/tMKZCNvw_akaEI3ls9Uq",
-              button_name: "start",
-            }); 
+            // window.gtag("event", "conversion", {
+            //   send_to: "AW-11453395597/tMKZCNvw_akaEI3ls9Uq",
+            //   button_name: "start",
+            // }); 
 
             window.gtag("event", "button_click", {
               button_name: "start",
