@@ -66,9 +66,7 @@ const Submission = () => {
 
   const onLoadHandler = (sub: any) => {
     if (window.gtag) {
-      // window.gtag('config', 'AW-11453395597');
       window.gtag("event", "page_view", {
-        // send_to: "AW-11453395597",
         page_title: "form",
         page_path: "/submission",
       });
@@ -76,11 +74,6 @@ const Submission = () => {
   };
   const onNextHandler = (sub: any) => {
     if (window.gtag) {
-      window.gtag('config', 'AW-11453395597');
-      window.gtag("event", "conversion", {
-        send_to: "AW-11453395597/q4KaCPT9_akaEI3ls9Uq",
-        button_name: "next",
-      });
       window.gtag("event", "button_click", {
         button_name: "next",
       });
@@ -91,18 +84,16 @@ const Submission = () => {
     setSubmitted(true);
     
     if (window.gtag) {
-      window.gtag('config', 'AW-11453395597');
-      window.gtag("event", "conversion", {
-        send_to: "AW-11453395597/eq1ICOPbiaoaEI3ls9Uq",
-        value: 30,
-        currency: "EUR",
-        transaction_id: submission._id,
-        user_email: submission.data.eMailAdresse ? submission.data.eMailAdresse : submission.data.eMailAdresse1
-      });
-      window.gtag("event", "purchase_event", {
-        // send_to: "AW-11453395597",
-        value: 30,
-        currency: "EUR",
+      // window.gtag("event", "conversion", {
+      //   send_to: "AW-16945727644/NRYoCLjr764aEJyRrZA_",
+      //   value: 160,
+      //   currency: "AED",
+      //   transaction_id: submission._id,
+      //   user_email: submission.data.eMailAdresse ? submission.data.eMailAdresse : submission.data.eMailAdresse1
+      // });
+      window.gtag("event", "conversion_event_purchase", {
+        value: 160,
+        currency: "AED",
         transaction_id: submission._id,
         user_email: submission.data.eMailAdresse ? submission.data.eMailAdresse : submission.data.eMailAdresse1
       });
@@ -296,7 +287,6 @@ const Submission = () => {
   return (
     <>
       <div>
-        {/* <Form src="https://formio.nachsendeauftrag-buchen.de/postnachsendeauftrag" onFormLoad={ onLoadHandler } onSubmit={onSubmitHandler} onNextPage={onNextHandler} submission={loadData} options={{ */}
         <Form src="https://formio.nachsendeauftrag-buchen.de/postnachsendeauftrag" onFormLoad={ onLoadHandler } onSubmit={onSubmitHandler} onNextPage={onNextHandler} submission={loadData} options={{
           language: 'de',
           i18n: {
