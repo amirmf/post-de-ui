@@ -12,7 +12,7 @@ const CancellationPolicy = () => {
    
    Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Digital Service
    Solutions LLC, Sharjah Media City, Sharjah,
-   UAE, Lizenznummer: 2536699.01, E-Mail: info@nachsendeauftrag-buchen.de) mittels einer eindeutigen
+   UAE,Handelsregister: Sharjah Freezone Authority, Lizenznummer: 2536699.01, E-Mail: info@nachsendeauftrag-buchen.de) mittels einer eindeutigen
    Erklärung (z. B. per Post oder E-Mail) über Ihre Entscheidung, den
    Vertrag zu widerrufen, informieren. Hierfür können Sie das beigefügte
    [Muster-Widerrufsformular](https://nachsendeauftrag-buchen.de/Muster.pdf) verwenden, dessen Nutzung jedoch nicht
