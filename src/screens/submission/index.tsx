@@ -92,8 +92,8 @@ const Submission = () => {
       //   user_email: submission.data.eMailAdresse ? submission.data.eMailAdresse : submission.data.eMailAdresse1
       // });
       window.gtag("event", "conversion_event_purchase", {
-        value: 160,
-        currency: "AED",
+        // value: 160,
+        // currency: "AED",
         transaction_id: submission._id,
         user_email: submission.data.eMailAdresse ? submission.data.eMailAdresse : submission.data.eMailAdresse1
       });
