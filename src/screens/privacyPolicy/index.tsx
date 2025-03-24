@@ -9,6 +9,8 @@ Digital Service Solutions LLC
 
 Sharjah Media City, Sharjah, UAE
 
+Handelsregister: Sharjah Freezone Authority
+
 Lizenznummer: 2536699.01
 
 E-Mail: info@nachsendeauftrag-buchen.de
