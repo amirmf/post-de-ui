@@ -6,11 +6,11 @@ const Impressum = () => {
 
       <h4>Adresse</h4>
       <p>
-        Digital Service Solutions - FZCO
-        <br />
-        Shams Business Center 
+        Digital Service Solutions LLC
         <br />
         Sharjah Media City, Sharjah, UAE 
+        <br />
+        Lizenznummer: 2536699.01
         <br />
         E-Mail:{" "}
         <a href="mailto:info@nachsendeauftrag-buchen.de">info@nachsendeauftrag-buchen.de</a>
