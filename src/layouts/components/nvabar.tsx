@@ -29,7 +29,7 @@ const Navbar = () => {
     <Link style={Styles.link} to="/faq">FAQ</Link>
     {/* <hr /> */}
     <p style={{ marginBottom:"-5px"}}> 
-    Die Website nachsendeauftrag-buchen.de ist ein unabhängiger Online-Service, betrieben von Digital Service Solutions - FZCO.
+    Die Website nachsendeauftrag-buchen.de ist ein unabhängiger Online-Service, betrieben von Digital Service Solutions LLC.
     </p>
   </nav>
   )

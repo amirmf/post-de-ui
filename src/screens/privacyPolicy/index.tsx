@@ -5,11 +5,11 @@ const PrivacyPolicy = () => {
   const txt=`
 **Verantwortlicher für die Datenverarbeitung:**
 
-Digital Service Solutions, FZCO
-
-Shams Business Center
+Digital Service Solutions LLC
 
 Sharjah Media City, Sharjah, UAE
+
+Lizenznummer: 2536699.01
 
 E-Mail: info@nachsendeauftrag-buchen.de
 
