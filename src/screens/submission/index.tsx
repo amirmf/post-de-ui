@@ -97,6 +97,11 @@ const Submission = () => {
         transaction_id: submission._id,
         user_email: submission.data.eMailAdresse ? submission.data.eMailAdresse : submission.data.eMailAdresse1
       });
+      windows.gtag('event', 'conversion', {
+        'send_to': 'AW-16945727644/Y-kXCPPRsa8aEJyRrZA_',
+        'transaction_id': submission._id
+      });
+
     }
     window.location.href = "/success";
   }
