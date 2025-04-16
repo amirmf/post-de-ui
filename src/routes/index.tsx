@@ -12,6 +12,7 @@ import MainLayout from "layouts/main";
 import SecondaryLayout from "layouts/secondary";
 import Submission from "screens/submission";
 import Success from "screens/success";
+import NotedeliverModify from "screens/modify";
 
 const routes = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const routes = createBrowserRouter([
       {
         path: "submission",
         element: <Submission />,
+      },
+      {
+        path: "notedelivermodify",
+        element: <NotedeliverModify />,
       },
       {
         path: "success",
