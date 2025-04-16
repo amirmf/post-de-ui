@@ -11,7 +11,6 @@ const NotedeliverModify = () => {
   const loadData = { data: {} };
   const urlParams = new URLSearchParams(window.location.search);
   loadData.data.theId = urlParams.get('theId');
-  loadData.data.email = urlParams.get('email');
 
   const onSubmitHandler = (submission: any) => {
     setResult(submission);
