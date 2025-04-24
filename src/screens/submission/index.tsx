@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 function getWeekdaysFromNowToNext3Months() {
   const today = new Date();
   const endDate = new Date();
-  endDate.setMonth(today.getMonth() + 3);
+  endDate.setMonth(today.getMonth() + 9);
 
   const dateList = [];
   let currentDate = new Date(today);
