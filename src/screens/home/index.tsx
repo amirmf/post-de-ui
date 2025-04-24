@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 function getWeekdaysFromNowToNext3Months() {
   const today = new Date();
   const endDate = new Date();
-  endDate.setMonth(today.getMonth() + 3);
+  endDate.setMonth(today.getMonth() + 9);
 
   const dateList = [];
   let currentDate = new Date(today);
@@ -216,6 +216,27 @@ const Home = () => {
 
       <button
         onClick={() => {
+          const startDate = !!document.getElementById("date-options") ? document.getElementById("date-options").options[document.getElementById("date-options").selectedIndex].value : '';
+          const endDate = !!document.getElementById("date-options2") ? document.getElementById("date-options2").options[document.getElementById("date-options2").selectedIndex].value : '';
+          if(!!endDate){
+            const startDate_ = Date.parse((startDate.split('.')[2]+'-'+startDate.split('.')[1]+'-'+startDate.split('.')[0]+'-'));
+            const endDate_ = Date.parse((endDate.split('.')[2]+'-'+endDate.split('.')[1]+'-'+endDate.split('.')[0]+'-'));
+            if(endDate_ < startDate_){
+              alert('Enddatum muss grösser sein als das startdatum');
+              return;
+            } 
+            const diffTime = Math.abs(endDate_ - startDate_);
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); 
+            if(diffDays < 18){
+              alert('Das Datum, ab dem wieder zugestellt werden soll muss mindestens 18 Tage nach dem Startzeitpunkt liegen. Bitte ändern Sie Ihre Eingaben.');
+              return;
+            }
+            if(diffDays >= 6*30){
+              alert('Die maximale Laufzeit für vorübergehende Nachsendeaufträge (Vorübergehende Abwesenheit) beträgt 6 Monate nach dem Startzeitpunkt. Bitte ändern Sie Ihre Eingaben.');
+              return;
+            }
+
+          }
           if (window.gtag) {
             window.gtag("event", "conversion", {
               send_to: "AW-11453395597/tMKZCNvw_akaEI3ls9Uq",

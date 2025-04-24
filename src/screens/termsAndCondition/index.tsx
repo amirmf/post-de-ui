@@ -122,15 +122,15 @@ zu deren Tochtergesellschaften oder zu anderen Zustelldiensten.
 
 **3. Zahlungsbedingungen, Preise und Rechnung**
 
-a\. Alle Preise sind Bruttopreise inkl. Umsatzsteuer in der jeweils
-gültigen Höhe.
+a\. Alle Preise sind Bruttopreise inkl. Umsatzsteuer in der jeweils gültigen Höhe.
 
-b\. Der Kunde hat die vereinbarten Entgelte im Voraus mit einer der im
-Bestellprozess angegebenen Zahlungsmöglichkeiten zu entrichten. Nach
-Vertragsschluss ist eine Änderung der Zahlungsart nicht mehr möglich.
+b\. Der Kunde hat die vereinbarten Entgelte durch Überweisung zu entrichten. Nach Vertragsschluss ist eine Änderung der Zahlungsart nicht mehr möglich.
 
-c\. Der Kunde ist damit einverstanden, dass ihm die Rechnung im
-PDF-Format an die angegebene E-Mailadresse zugestellt wird.
+c\. Der Kunde ist damit einverstanden, dass ihm die Rechnung im PDF-Format an die angegebene E-Mailadresse zugestellt wird.
+
+d\. Die Rechnung ist innerhalb von 7 Tagen nach Zugang zur Zahlung fällig. Nach Ablauf dieser Frist gerät der Kunde gemäß § 286 Abs. 3 BGB automatisch in Verzug, ohne dass es einer weiteren Mahnung bedarf. 
+
+e\. Die Zahlungen sind auf ein Konto mit Sitz in den Vereinigten Arabischen Emiraten zu leisten. Der Kunde ist dafür verantwortlich, dass die Überweisung ordnungsgemäß und vollständig unter Berücksichtigung etwaiger Bankgebühren erfolgt. Ein entsprechender Zahlungsempfänger sowie die Kontodaten werden dem Kunden im Rahmen des Bestellprozesses sowie auf der Rechnung mitgeteilt.
 
 **4. Pflichten des Nutzers**
 
