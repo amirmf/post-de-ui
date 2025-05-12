@@ -52,14 +52,7 @@ den zuständigen Postdienstleistern. Eine Haftung des Anbieters für
 Ansprüche des Kunden gegenüber den Postdienstleistern ist ausdrücklich
 ausgeschlossen.
 
-h\. Der Kunde erteilt dem Anbieter die Vollmacht, in seinem Namen
-Nachsendeaufträge bei den im Bestellprozess angegebenen
-Postdienstleistern zu beantragen. Diese Bevollmächtigung umfasst
-sämtliche erforderlichen Handlungen zur Beantragung des
-Nachsendeauftrags, einschließlich der Einrichtung beim
-Postdienstleister, der Unterzeichnung erforderlicher Dokumente sowie der
-Zahlungsabwicklung. Darüber hinaus erstreckt sich die Vollmacht auch auf
-notwendige Anpassungen oder Änderungen des Nachsendeauftrags.
+h\. Der Kunde erteilt dem Anbieter die Vollmacht, in seinem Namen Nachsendeaufträge bei den im Bestellprozess angegebenen Postdienstleistern zu beantragen. Diese Bevollmächtigung umfasst sämtliche erforderlichen Handlungen zur Beantragung des Nachsendeauftrags, einschließlich der Einrichtung beim Postdienstleister, der Unterzeichnung erforderlicher Dokumente sowie der Zahlungsabwicklung. Darüber hinaus erstreckt sich die Vollmacht auch auf eventuelle Anpassungen, Änderungen, Stornierungen und Löschungen des Nachsendeauftrags.
 
 Im Rahmen der Auftragserfüllung übermittelt der Anbieter die vom Kunden
 bereitgestellten personenbezogenen Daten an die zuständigen
@@ -130,17 +123,14 @@ c\. Der Kunde ist damit einverstanden, dass ihm die Rechnung im PDF-Format an di
 
 d\. Die Rechnung ist innerhalb von 7 Tagen nach Zugang zur Zahlung fällig. Nach Ablauf dieser Frist gerät der Kunde gemäß § 286 Abs. 3 BGB automatisch in Verzug, ohne dass es einer weiteren Mahnung bedarf. 
 
-e\. Die Zahlungen sind auf ein Konto mit Sitz in den Vereinigten Arabischen Emiraten zu leisten. Der Kunde ist dafür verantwortlich, dass die Überweisung ordnungsgemäß und vollständig unter Berücksichtigung etwaiger Bankgebühren erfolgt. Ein entsprechender Zahlungsempfänger sowie die Kontodaten werden dem Kunden im Rahmen des Bestellprozesses sowie auf der Rechnung mitgeteilt.
+e\. Die Zahlungen sind auf ein Konto mit Sitz in den Vereinigten Arabischen Emiraten zu leisten. Der Kunde ist dafür verantwortlich, dass die Überweisung ordnungsgemäß und vollständig unter Berücksichtigung etwaiger Bankgebühren erfolgt. Ein entsprechender Zahlungsempfänger sowie die Kontodaten werden dem Kunden auf der Rechnung mitgeteilt. 
 
 **4. Pflichten des Nutzers**
 
 a\. Der Nutzer Verpflichtet sich dazu, die zu tätigen Eingaben
 recherchiert, überprüft und diese wahrheitsgemäß eingetragen zu haben.
 
-b\. Der Nutzer Verpflichtet sich für Auftragsbestätigungen, Rechnungen
-und Wiederrufsformulare von nachsendeauftrag-buchen.de unter der von ihm
-eingetragenen E-Mail-Adresse ein jederzeit erreichbares Postfach
-bereitzustellen.
+b\. Der Nutzer Verpflichtet sich für Auftragsbestätigungen, Rechnungen, Wiederrufsformulare und jegliche weitere Unterlagen und Kommunikation von und mit nachsendeauftrag-buchen.de unter der von ihm eingetragenen E-Mail-Adresse ein jederzeit erreichbares Postfach bereitzustellen. 
 
 c\. Falls der Kunde im Auftrag anderer Personen handelt, bestätigt er,
 dass er über die erforderliche Bevollmächtigung verfügt, um in deren
