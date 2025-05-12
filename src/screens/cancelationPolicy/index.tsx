@@ -18,8 +18,6 @@ const CancellationPolicy = () => {
    [Muster-Widerrufsformular](https://nachsendeauftrag-buchen.de/Muster.pdf) verwenden, dessen Nutzung jedoch nicht
    verpflichtend ist.
    
-   Das beigefügte Muster-Widerrufsformular finden Sie auch hier.
-   
    Zur Wahrung der Widerrufsfrist genügt es, wenn Sie die Mitteilung über
    die Ausübung Ihres Widerrufsrechts vor Ablauf der Frist absenden.
    
