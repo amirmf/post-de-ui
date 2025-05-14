@@ -216,10 +216,12 @@ const Home = () => {
 
       <button
         onClick={() => {
+          const sofortDate = document.querySelectorAll('[for="sofort"]')[0].textContent.split(' ')[1].replaceAll('(','').replaceAll(')','');
           const startDate = !!document.getElementById("date-options") ? document.getElementById("date-options").options[document.getElementById("date-options").selectedIndex].value : '';
           const endDate = !!document.getElementById("date-options2") ? document.getElementById("date-options2").options[document.getElementById("date-options2").selectedIndex].value : '';
           if(!!endDate){
-            const startDate_ = Date.parse((startDate.split('.')[2]+'-'+startDate.split('.')[1]+'-'+startDate.split('.')[0]));
+            const sofortDate_ = Date.parse((sofortDate.split('.')[2]+'-'+sofortDate.split('.')[1]+'-'+sofortDate.split('.')[0]));
+            const startDate_ = ($('#sofort').value=='sofort') ? sofortDate_ : Date.parse((startDate.split('.')[2]+'-'+startDate.split('.')[1]+'-'+startDate.split('.')[0]));
             const endDate_ = Date.parse((endDate.split('.')[2]+'-'+endDate.split('.')[1]+'-'+endDate.split('.')[0]));
             if(endDate_ < startDate_){
               alert('Enddatum muss grösser sein als das startdatum');
