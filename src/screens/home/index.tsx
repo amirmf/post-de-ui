@@ -221,7 +221,7 @@ const Home = () => {
           const endDate = !!document.getElementById("date-options2") ? document.getElementById("date-options2").options[document.getElementById("date-options2").selectedIndex].value : '';
           if(!!endDate){
             const sofortDate_ = Date.parse((sofortDate.split('.')[2]+'-'+sofortDate.split('.')[1]+'-'+sofortDate.split('.')[0]));
-            const startDate_ = ($('#sofort').value=='sofort') ? sofortDate_ : Date.parse((startDate.split('.')[2]+'-'+startDate.split('.')[1]+'-'+startDate.split('.')[0]));
+            const startDate_ = (!!document.getElementById("date-options")) ? Date.parse((startDate.split('.')[2]+'-'+startDate.split('.')[1]+'-'+startDate.split('.')[0])):sofortDate_;
             const endDate_ = Date.parse((endDate.split('.')[2]+'-'+endDate.split('.')[1]+'-'+endDate.split('.')[0]));
             if(endDate_ < startDate_){
               alert('Enddatum muss grösser sein als das startdatum');
