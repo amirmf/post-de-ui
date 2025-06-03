@@ -12,6 +12,8 @@ const Impressum = () => {
         <br />
         Lizenznummer: 2536699.01
         <br />
+        Steuer-Identifikationsnummer:: 104979929700001
+        <br />
         E-Mail:{" "}
         <a href="mailto:info@nachsendeauftrag-buchen.de">info@nachsendeauftrag-buchen.de</a>
       </p>
