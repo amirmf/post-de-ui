@@ -85,14 +85,16 @@ const Submission = () => {
     setSubmitted(true);
   
     if (window.gtag) {
-      window.gtag('event', 'conversion', {
-        'send_to': 'AW-11453395597/eq1ICOPbiaoaEI3ls9Uq',
-        'transaction_id': submission._id
-      });
+      // MAIN ACC
       // window.gtag('event', 'conversion', {
-      //   'send_to': 'AW-16945727644/Y-kXCPPRsa8aEJyRrZA_',
+      //   'send_to': 'AW-11453395597/eq1ICOPbiaoaEI3ls9Uq',
       //   'transaction_id': submission._id
       // });
+      // NEW ACC
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-16945727644/Y-kXCPPRsa8aEJyRrZA_',
+        'transaction_id': submission._id
+      });
     }
     window.location.href = "/success";
   }
